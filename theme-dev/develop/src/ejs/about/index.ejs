@@ -1,0 +1,10 @@
+<% const info={ title : "" , desc : "" , css: "../" }; %>
+  <%- include("../include/_head",{meta: info}) -%>
+    <div class="l-wrap">
+      <!-- 閉じタグは_footer.ejs -->
+      <!-- 画像相対パス(dist参照) -->
+      <% const path=["../assets/images/"]%>
+        <%- include("../include/_header", {path: '../' }) -%>
+            <main class="l-main">
+            </main>
+            <%- include("../include/_footer", {js: "../" }) -%>

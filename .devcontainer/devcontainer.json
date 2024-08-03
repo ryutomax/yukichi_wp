@@ -1,0 +1,23 @@
+{
+  "name": "wp-dev-docker",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "wordpress",
+  "workspaceFolder": "/var/www/html/wp-content/themes/yukichi",
+  "customizations": {
+    "settings": {
+			"terminal.integrated.shell.linux": "/bin/bash",
+			"php.suggest.basic": false // avoids duplicate autocomplete
+		},
+    "vscode": {
+      "extensions": [
+        "xdebug.php-pack",
+				"xdebug.php-debug",
+				"wordpresstoolbox.wordpress-toolbox",
+				"johnbillion.vscode-wordpress-hooks",
+				"oderwat.indent-rainbow",
+				"mosapride.zenkaku"
+      ]
+    }
+  },
+  "remoteUser": "root"
+}
