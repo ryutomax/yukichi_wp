@@ -2,7 +2,7 @@
   "name": "wp-dev-docker",
   "dockerComposeFile": "../docker-compose.yml",
   "service": "wordpress",
-  "workspaceFolder": "/var/www/html/wp-content/themes/yukichi",
+  "workspaceFolder": "/var/www/html/",
   "customizations": {
     "settings": {
 			"terminal.integrated.shell.linux": "/bin/bash",
