@@ -2,11 +2,8 @@
 <html lang="ja">
 
   <?php if (is_home() || is_front_page()) :?>
-    <?php $title = "TOP｜"; ?>
+    <?php $title = "TOP｜諭吉そば"; ?>
     <?php $description = ''; ?>
-  <?php elseif((is_archive() && ('music' == get_query_var('post_type'))) || (is_single() && ('music' == get_post_type()))):?>
-    <?php $title = ""; ?>
-    <?php $description = "邦楽、洋楽などのミュージックにまつわるニュース、インタビュー、コラムなどをお届け"; ?>
   <?php endif; ?>
   <head>
     <meta charset="UTF-8" />
