@@ -3,7 +3,7 @@
     <div class="p-header-top">
       <h1 class="p-header-logo c-logo">
         <a class="p-header-logo-link" href="<?= esc_url(home_url('/')) ?>">
-          <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/main_logo_black.png" alt="諭吉そば" class="p-header-logo-img">
+          <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/main_logo_black.png" alt="諭吉そば 心躍る、うまいラーメンを" class="p-header-logo-img">
         </a>
       </h1>
       <button class="p-header-menuBtn js-menu-btn u-tb-show" aria-label="Menuを開く">

@@ -1,16 +1,8 @@
 <?php
 	get_template_part('template-parts/head');
 	get_template_part('template-parts/header');
-
-	$home_url = esc_url(home_url('/'));
-
-	$args = [
-			'breadcrumb_slug_arr' => [$post_type],
-			'breadcrumb_arr' => ['アニメ', $title]
-	];
 ?>
 <main class="l-main">
-	
 	<?php get_template_part('template-parts/breadcrumb', null, $args); ?>
 	<div class="p-mainContent">
 		<section class="c-content">

@@ -3,7 +3,7 @@
 
   <?php if (is_home() || is_front_page()) :?>
     <?php $title = "TOP｜諭吉そば"; ?>
-    <?php $description = ''; ?>
+    <?php $description = '諭吉そば 心躍る、うまいラーメンを'; ?>
   <?php endif; ?>
   <head>
     <meta charset="UTF-8" />

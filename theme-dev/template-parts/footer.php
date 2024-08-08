@@ -1,16 +1,13 @@
     <a href="#" class="c-toUpBtn js-toUpBtn u-zindex_100">
-      <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/top_arrow.svg" alt="ページ上部へ">
+      <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/" alt="ページ上部へ">
     </a>
     <footer class="l-footer p-footer">
       <div class="p-footer-inner">
         <h1 class="p-footer-logo">
           <a class="p-footer-logo-link" href="<?= esc_url(home_url('/')) ?>">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/footer/footer_logo.png" alt="Lotus クリエイターの言葉を伝えるエンタメ総合メディア" class="p-footer-logo-img" loading="lazy">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/main_logo_white.png" alt="諭吉そば 心躍る、うまいラーメンを" class="p-footer-logo-img" loading="lazy">
           </a>
         </h1>
-        <div class="p-header-search u-tb-show">
-          <?php get_search_form(); ?>
-        </div>
         <nav class="p-footer-nav">
           <ul class="p-footer-nav-top u-tb-show-flex">
             <li class="p-footer-nav-item"><a href="<?= esc_url(home_url('/')) ?>aboutus" class="p-footer-nav-link"><span class="p-footer-nav-i">A</span>bout Us</a></li>
