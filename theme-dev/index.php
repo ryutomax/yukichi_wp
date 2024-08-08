@@ -52,20 +52,44 @@
         <p class="p-menu-text-jp">まろやかな醤油の味わい、チャーシュー丼との相性も抜群です。</p>
         <p class="p-menu-text-en">The mellow soy sauce taste goes perfectly with the chashu rice bowl. The compatibility is also excellent.</p>
         <ul class="p-menu-list">
+        <?php
+					$args = array(
+						'post_type' => 'menu',
+						'post_status' => 'publish',
+						'tax_query' => [
+							[
+								'taxonomy' => 'menu-cat',   // カスタムタクソノミーを指定
+								'field'    => 'slug',       // タームの"slug"または"id"を指定
+								'terms'    => 'ramen',      // 絞り込みたいタームを指定
+							]
+						]
+					);
+					$wp_query = new WP_Query( $args );
+					if ( $wp_query->have_posts() ):
+					while ( $wp_query->have_posts() ):
+						$wp_query->the_post();
+				?>
           <li class="p-menu-item">
             <img src="p-menu-item-img" alt="">
             <h4 class="p-menu-item-ttl">
-              <span class="sub"></span>
-              <span class="main"></span>
-              <span class="en"></span>
+              <span class="sub"><?php the_field('メニューリード文'); ?></span>
+              <span class="main"><?php the_field('メニュー名'); ?></span>
+              <span class="en"><?php the_field('メニュー名（英語）'); ?></span>
             </h4>
             <div class="p-menu-item-intro">
-              <p class="jp"></p>
-              <p class="en"></p>
-              <span class="price"></span>
+              <p class="jp"><?php the_field('メニュー詳細'); ?></p>
+              <p class="en"><?php the_field('メニュー詳細（英語）'); ?></p>
+              <span class="price"><?php the_field('値段'); ?>(税込み)</span>
             </div>
 
           </li>
+          <?php endwhile; ?>
+          <?php else: ?>
+            <p>該当する記事がありません。</p>
+          <?php
+              endif;
+              wp_reset_postdata();
+          ?>
         </ul>
       </div>
     </div>

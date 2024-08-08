@@ -134,3 +134,83 @@ function change_menu_label() {
 	$submenu['upload.php'][10][0] = '画像・ファイルを追加';
 }
 add_action( 'admin_menu', 'change_menu_label' );
+
+// ========================================
+// カスタム投稿タイプ　一覧レイアウト調整
+// ========================================
+// 管理画面にカスタムタクソノミーのドロップダウンを追加
+function add_custom_taxonomy_filter() {
+	global $typenow;
+	$post_type = 'menu'; // カスタム投稿タイプのスラッグ
+	$taxonomy  = 'menu-cat'; // カスタムタクソノミーのスラッグ
+
+	if ($typenow == $post_type) {
+			$selected      = isset($_GET[$taxonomy]) ? $_GET[$taxonomy] : '';
+			$info_taxonomy = get_taxonomy($taxonomy);
+			wp_dropdown_categories(array(
+					'show_option_all' => __("全ての{$info_taxonomy->label}"),
+					'taxonomy'        => $taxonomy,
+					'name'            => $taxonomy,
+					'orderby'         => 'name',
+					'selected'        => $selected,
+					'show_count'      => true,
+					'hide_empty'      => true,
+			));
+	};
+}
+add_action('restrict_manage_posts', 'add_custom_taxonomy_filter');
+
+// クエリを変更して絞り込みを実施
+function filter_custom_post_type_by_taxonomy($query) {
+	global $pagenow;
+	$post_type = 'menu'; // カスタム投稿タイプのスラッグ
+	$taxonomy  = 'menu-cat'; // カスタムタクソノミーのスラッグ
+
+	if ($pagenow == 'edit.php' && isset($_GET[$taxonomy]) && $_GET[$taxonomy] != '' && $query->query_vars['post_type'] == $post_type) {
+			$term = get_term_by('id', $_GET[$taxonomy], $taxonomy);
+			$query->query_vars[$taxonomy] = $term->slug;
+	}
+}
+add_filter('pre_get_posts', 'filter_custom_post_type_by_taxonomy');
+
+
+// カスタム列を追加
+function add_custom_taxonomy_column($columns) {
+    // 新しい列を追加する前に、既存の列を保持する
+    $new_columns = array();
+
+    foreach ($columns as $key => $value) {
+        $new_columns[$key] = $value;
+        // 'date'列の前に新しい列を追加
+        if ($key === 'title') {
+            $new_columns['menu-cat'] = __('カテゴリ');
+        }
+    }
+
+    return $new_columns;
+}
+add_filter('manage_menu_posts_columns', 'add_custom_taxonomy_column');
+
+// カスタム列にデータを表示
+function display_custom_taxonomy_column($column, $post_id) {
+    if ($column == 'menu-cat') {
+        $terms = get_the_terms($post_id, 'menu-cat');
+        if (!empty($terms)) {
+            $out = array();
+            foreach ($terms as $term) {
+                $out[] = sprintf('<a href="%s">%s</a>',
+                    esc_url(add_query_arg(array('menu' => get_post_type($post_id), 'menu-cat' => $term->slug), 'edit.php')),
+                    esc_html(sanitize_term_field('name', $term->name, $term->term_id, 'menu-cat', 'display'))
+                );
+            }
+            echo join(', ', $out);
+        } else {
+            _e('なし');
+        }
+    }
+}
+add_action('manage_menu_posts_custom_column', 'display_custom_taxonomy_column', 10, 2);
+
+// ========================================
+// カスタム投稿タイプ　一覧レイアウト調整　end
+// ========================================
