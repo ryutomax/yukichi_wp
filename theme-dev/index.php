@@ -1,6 +1,8 @@
 <?php
 	get_template_part('template-parts/head');
 	get_template_part('template-parts/header');
+
+  echo "debug now";
 ?>
 <main class="l-main">
   <section class="p-top c-section">

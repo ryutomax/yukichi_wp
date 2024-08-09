@@ -36,13 +36,14 @@ RUN set -ex; \
 		opcache \
 		zip \
 	; \
-	pecl install imagick-3.4.4; \
-  pecl install xdebug-2.8.1; \
-	docker-php-ext-enable imagick xdebug;\
+  pecl install xdebug-3.1.6; \
+	docker-php-ext-enable xdebug;\
 	rm -rf /var/lib/apt/lists/*
 
 #XDebug settings
-RUN echo "[XDebug]\nxdebug.remote_enable = 1\nxdebug.remote_autostart = 1" > $PHP_INI_DIR/conf.d/xdebug.ini
+
+COPY ./xdebug.ini $PHP_INI_DIR/conf.d/xdebug.ini
+# RUN echo "[XDebug]\nxdebug.remote_enable = 1\nxdebug.remote_autostart = 1" > $PHP_INI_DIR/conf.d/xdebug.ini
 
 #WP recommended PHP settings
 RUN { \

@@ -8,7 +8,7 @@ x-app: &app
 services:
   wordpress:
     <<: *app
-    build: 
+    build:
       context: ./Dockerfiles
       args:
         - WP_THEME_NAME=${WP_THEME_NAME}
@@ -22,6 +22,7 @@ services:
       - /var/www/html/wp-content/themes/${WP_THEME_NAME}/assets/
     ports:
       - "8000:80"
+      - "9003:9003"
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: ${DB_USER}
