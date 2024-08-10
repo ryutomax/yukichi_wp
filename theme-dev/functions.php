@@ -22,13 +22,12 @@ function enqueue_scripts() {
 		wp_enqueue_script('single', get_theme_file_uri('/assets/js/parts/single-min.js'), [], $version, true);
 	}
 	if (is_page('contact')) {
-		wp_enqueue_script('datepicker', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', [], $version, true);
+		// wp_enqueue_script('datepicker', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', [], $version, true);
 		wp_enqueue_script('contact', get_theme_file_uri('/assets/js/parts/contact-min.js'), [], $version, true);
 	}
-	// wp_enqueue_script('jQuery', get_template_directory_uri() . '/assets/vender/jquery-3.7.1.min.js', [], $version, true);
+	wp_enqueue_script('jQuery', get_template_directory_uri() . '/assets/vender/jquery-3.7.1.min.js', [], $version, true);
 	// wp_enqueue_script('slick-min', get_template_directory_uri() . '/assets/vender/slick-1.8.1/slick/slick.min.js', [], $version, true);
 	wp_enqueue_script('bundle', get_template_directory_uri() . '/assets/js/bundle.js', [], $version, true);
-	// wp_enqueue_script('noBundle', get_template_directory_uri() . '/assets/js/nonBundle/noBundle-min.js', [], $css_version, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
@@ -58,33 +57,34 @@ add_filter( 'mwform_validation_mw-wp-form-130', 'my_exam_validation_rule', 10, 3
 //カスタム投稿タイプ生成 呼び出し
 function create_post_type() {
 
-	post_type_template('menu', 'おしながき', 7);
-	post_type_template('news', 'お知らせ', 8);
+	post_type_template('menu', 'おしながき', 7, true);
+	post_type_template('news', 'お知らせ', 8, false);
 }
 add_action( 'init', 'create_post_type' );
 
 //アイキャッチ画像有効化
-add_theme_support( 'post-thumbnails' );
+// add_theme_support( 'post-thumbnails' );
 
 //投稿タイプ生成
-function post_type_template ($postTypeName, $label, $menuPosition) {
-		register_post_type(
-			$postTypeName,
-			[
-				'label' => $label,
-				'public' => true,
-				'has_archive' => true,
-				'show_in_rest' => true,
-				'menu_position' => $menuPosition,
-				'supports' =>  [  // 初期値 title と editor のみ
-					'title',  // 記事タイトル
-					'editor',  // 記事本文
-					'thumbnail',  // アイキャッチ画像
-					'revisions'  // リビジョン
-				]
+function post_type_template ($postTypeName, $label, $menuPosition, $is_menu) {
+	register_post_type(
+		$postTypeName,
+		[
+			'label' => $label,
+			'public' => true,
+			'has_archive' => true,
+			'show_in_rest' => true,
+			'menu_position' => $menuPosition,
+			'supports' =>  [  // 初期値 title と editor のみ
+				'title',  // 記事タイトル
+				'editor',  // 記事本文
+				'thumbnail',  // アイキャッチ画像
+				'revisions'  // リビジョン
 			]
-		);
+		]
+	);
 
+	if($is_menu == true) {
 		register_taxonomy(
 			"{$postTypeName}-cat",
 			$postTypeName,
@@ -103,6 +103,7 @@ function post_type_template ($postTypeName, $label, $menuPosition) {
 				// 'show_in_menu' => false //管理画面 非表示
 			]
 		);
+	}
 }
 
 // 「新規カテゴリー追加」を非表示
@@ -122,13 +123,6 @@ function change_menu_label() {
 	unset($menu[4]); //スペース
 	unset($menu[10]);//メディア
 	unset($menu[5]); //投稿
-	// $menu[6];//インタビュー
-	// $menu[7];//音楽
-	// $menu[8];//アニメ
-	// $menu[9];//ゲーム
-	// $menu[]
-	// $menu[15];
-	// $menu[25];
 	$menu[19] = ["画像・ファイル", "upload_files", "upload.php", "", "menu-top menu-icon-media" ,"menu-media" ,"dashicons-admin-media"];
 	$submenu['upload.php'][5][0] = '画像・ファイル一覧';
 	$submenu['upload.php'][10][0] = '画像・ファイルを追加';
@@ -198,7 +192,7 @@ function display_custom_taxonomy_column($column, $post_id) {
         if (!empty($terms)) {
             $out = array();
             foreach ($terms as $term) {
-                $out[] = sprintf('<a href="%s">%s</a>',
+                $out[] = sprintf('<p href="%s">%s</p>',
                     esc_url(add_query_arg(array('menu' => get_post_type($post_id), 'menu-cat' => $term->slug), 'edit.php')),
                     esc_html(sanitize_term_field('name', $term->name, $term->term_id, 'menu-cat', 'display'))
                 );

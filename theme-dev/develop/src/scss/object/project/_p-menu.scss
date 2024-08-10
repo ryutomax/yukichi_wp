@@ -1,0 +1,106 @@
+@use "global" as *;
+
+.p-menu {}
+
+.p-menu-inner {}
+
+.p-menu-ttl {
+  background-image: url(../images/main_top_bg.jpg);
+  background-size: cover;
+  background-position-y: 270px;
+  margin: 0 -16px;
+  padding: 20px 0 120px 0;
+}
+
+.p-menu-img {
+  margin-top: -80px;
+}
+
+.p-menu-cont {
+  padding: 20px;
+}
+
+.p-menu-ramen-ttl {}
+
+.p-menu-text-jp {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.p-menu-text-en {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.p-menu-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-menu-item {
+  width: calc((100%) / 3);
+}
+
+.p-menu-item-img {}
+
+.p-menu-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  $fs: rem(24);
+  .sub {
+    color: $gold;
+    font-size: calc($fs * 0.6);
+    margin-bottom: 8px;
+  }
+  .main {
+    font-size: $fs;
+    margin-bottom: 8px;
+  }
+
+  .en {
+    color: $red;
+    font-size: calc($fs * 0.6);
+    margin-bottom: 16px;
+  }
+}
+
+.p-menu-item-intro {
+  display: flex;
+  flex-direction: column;
+  .jp {
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .en {
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .price {
+    font-size: rem(24);
+    color: $gold;
+    text-align: center;
+    &::after {
+      content: "(税込)";
+      font-size: 65%;
+      margin-left: 8px;
+    }
+  }
+}
+
+.p-menu-temp {
+  display: flex;
+  justify-content: center;
+  img {
+    margin: 4px;
+    width: 32px;
+  }
+}
+
+
+
+
+

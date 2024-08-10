@@ -1,8 +1,7 @@
 <?php
 	get_template_part('template-parts/head');
 	get_template_part('template-parts/header');
-
-  echo "debug now";
+  require_once(locate_template('template-parts/module_func.php', true, true));
 ?>
 <main class="l-main">
   <section class="p-top c-section">
@@ -10,10 +9,10 @@
       <div class="p-top-banner">
         <img src="" alt="" class="p-top-banner-img">
       </div>
-      <div class="p-top-main">
-        <img src="" alt="" class="p-top-main-img">
+      <div class="p-top-main" id="introduction">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/greeting/greeting_mv.png" alt="心躍る、うまいラーメンを" class="p-top-main-img">
         <div class="p-top-main-cont">
-          <h2 class="p-top-main-h2">心躍る、<br>うまい<br>ラーメンを</h2>
+          <h2 class="p-top-main-copy">心躍る、<br>うまい<br>ラーメンを</h2>
           <div class="p-top-main-text">
             <p class="p-top-main-text-jp">
               新しいのにどこか懐かしさを感じる味わいの<br>
@@ -22,7 +21,7 @@
               それぞれの個性ある味わいをお楽しみください。
             </p>
             <p class="p-top-main-text-en">
-              It has a taste that feels nostalgic even though it is new. From traditional street food flavors to new flavors We make ramen, soba, udon, and curry by hand. Please enjoy the unique taste of each.
+              It has a taste that feels nostalgic even though it is new.<br>From traditional street food flavors to new flavors <br>We make ramen, soba, udon, and curry by hand. <br>Please enjoy the unique taste of each.
             </p>
           </div>
         </div>
@@ -31,72 +30,110 @@
     </div>
     <!-- /.p-top-inner -->
   </section>
-  <section class="p-news c-section">
-    <div class="p-news-inner">
-      <h3 class="p-news-ttl c-title"><span>おしらせ</span><span>NEWS</span></h3>
+  <section class="p-news c-section" id="news">
+    <div class="p-news-inner c-section-inner">
+      <h3 class="p-news-ttl c-title">
+        <span class="c-title-jp">おしらせ</span>
+        <span class="c-title-en">NEWS</span>
+      </h3>
       <img src="" alt="" class="p-news-img">
-      <ul class="p-news-list">
-        <li class="p-news-time">
-          <time datetime="" class="p-news-time"></time>
-          <h4 class="p-news-time-ttl"></h4>
-        </li>
-      </ul>
-      <button class="p-news-more">MORE</button>
-    </div>
-    <!-- /.p-news-inner -->
-  </section>
-  <section class="p-menu c-section">
-    <div class="p-menu-inner">
-      <h3 class="p-menu-ttl c-title"><span>おしながき</span><span>MENU</span></h3>
-      <img src="" alt="" class="p-menu-img">
-      <div class="p-menu-ramen">
-        <h4 class="p-menu-ramen-ttl c-title"><span>ラーメン</span><span>Soy-sauce Ramen</span></h4>
-        <p class="p-menu-text-jp">まろやかな醤油の味わい、チャーシュー丼との相性も抜群です。</p>
-        <p class="p-menu-text-en">The mellow soy sauce taste goes perfectly with the chashu rice bowl. The compatibility is also excellent.</p>
-        <ul class="p-menu-list">
+      <div class="p-news-list">
         <?php
 					$args = array(
-						'post_type' => 'menu',
+						'post_type' => 'news',
 						'post_status' => 'publish',
-						'tax_query' => [
-							[
-								'taxonomy' => 'menu-cat',   // カスタムタクソノミーを指定
-								'field'    => 'slug',       // タームの"slug"または"id"を指定
-								'terms'    => 'ramen',      // 絞り込みたいタームを指定
-							]
-						]
+            'posts_per_page' => 10,
 					);
+          $news_count = 1;
+          // 表示される記事数取得
 					$wp_query = new WP_Query( $args );
+          $news_num = $wp_query->found_posts;
 					if ( $wp_query->have_posts() ):
 					while ( $wp_query->have_posts() ):
 						$wp_query->the_post();
 				?>
-          <li class="p-menu-item">
-            <img src="p-menu-item-img" alt="">
-            <h4 class="p-menu-item-ttl">
-              <span class="sub"><?php the_field('メニューリード文'); ?></span>
-              <span class="main"><?php the_field('メニュー名'); ?></span>
-              <span class="en"><?php the_field('メニュー名（英語）'); ?></span>
-            </h4>
-            <div class="p-menu-item-intro">
-              <p class="jp"><?php the_field('メニュー詳細'); ?></p>
-              <p class="en"><?php the_field('メニュー詳細（英語）'); ?></p>
-              <span class="price"><?php the_field('値段'); ?>(税込み)</span>
-            </div>
-
-          </li>
-          <?php endwhile; ?>
+          <?php if($news_count <= 5): ?>
+            <article class="p-news-itme">
+              <a href="<?php the_permalink(); ?>" class="p-news-link">
+                <time datetime="<?= get_the_date('Y.m.d'); ?>" class="p-news-time"><?= get_the_date('Y.m.d'); ?></time>
+                <h4 class="p-news-time-ttl"><?php str_len($post->post_title, 30); ?></h4>
+              </a>
+            </article>
           <?php else: ?>
-            <p>該当する記事がありません。</p>
-          <?php
-              endif;
-              wp_reset_postdata();
-          ?>
-        </ul>
+            <?php if ($news_count == 6): ?>
+              <div class="p-news-hide" id="blind-area" style="display:none;">
+            <?php endif; ?>
+              <article class="p-news-itme">
+                <a href="<?php the_permalink(); ?>" class="p-news-link">
+                  <time datetime="<?= get_the_date('Y.m.d'); ?>" class="p-news-time"><?= get_the_date('Y.m.d'); ?></time>
+                  <h4 class="p-news-time-ttl"><?php str_len($post->post_title, 30); ?></h4>
+                </a>
+              </article>
+            <!-- 最後の記事でタグを閉じる 記事カウント件数＝表示記事数-->
+            <?php if ($news_count == $news_num + 1): ?>
+              </div>
+              <!-- /.p-news-hide -->
+            <?php endif; ?>
+          <?php endif; ?>
+        <?php $news_count++; ?>
+        <?php endwhile; ?>
+        <?php else: ?>
+          <p>お知らせはありません。</p>
+        <?php
+            endif;
+            wp_reset_postdata();
+        ?>
       </div>
+      <button id="more" class="p-news-more">MORE</button>
+    </div>
+    <!-- /.p-news-inner -->
+  </section>
+  <section class="p-menu c-section" id="menu">
+    <div class="p-menu-inner c-section-inner">
+      <h3 class="p-menu-ttl c-title">
+        <span class="c-title-jp">おしながき</span>
+        <span class="c-title-en">MENU</span>
+      </h3>
+      <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/menu/menu_mv.png" alt="心躍る、うまいラーメンを" class="p-menu-img">
+      <!-- ラーメン -->
+      <?php get_template_part('template-menu/menu-ramen'); ?>
+      <!-- お蕎麦 -->
+      <?php get_template_part('template-menu/menu-soba'); ?>
+      <!-- トッピング -->
+      <?php get_template_part('template-menu/menu-topping'); ?>
+      <p class="p-menu-caption">※価格は税込です。※商品情報は一部となります。詳しくは店舗メニューよりご確認ください。<br>
+      ※店舗の都合により、販売する数量や時間の限定、及び予告なく販売を中止させていただく場合もございますので、あらかじめご了承ください。</p>
+    </div>
+    <!-- /.p-menu-inner -->
+  </section>
+  <section class="p-access c-section" id="access">
+    <div class="p-access-inner c-section-inner">
+      <h3 class="p-access-ttl c-title">
+        <span class="c-title-jp">アクセス</span>
+        <span class="c-title-en">ACCESS</span>
+      </h3>
+      <div class="p-access-cont">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/access/access_mv.png" alt="諭吉そば" class="p-access-img">
+        <div class="p-access-info">
+          <div class="p-access-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479746645863!2d139.7454329!3d35.6585805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1723253211003!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p class="p-access-meta">
+            千葉県松戸市小根本51-9 マツドKビル 1F <br>
+            営業時間：11:45～14:00 <br>
+            定休日  ：土曜日、日曜日、祝日
+          </p>
+        </div>
+      </div>
+      <!-- /.p-access-cont -->
     </div>
     <!-- /.p-menu-inner -->
   </section>
 </main>
-
 <?php get_template_part('template-parts/footer'); ?>
+<script>
+  $('#more').click(function() {
+    $('#blind-area').css('display', 'block');
+    $(this).css('display', 'none')
+  });
+</script>

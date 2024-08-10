@@ -33,8 +33,6 @@
     <!--絶対パスで記述-->
     <title><?= $title ?></title>
     <?php wp_head(); ?>
-    <!-- Google Ads -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5155165014369001" crossorigin="anonymous"></script>
   </head>
 
   <body class="js-load">

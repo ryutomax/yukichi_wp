@@ -1,9 +1,4 @@
 @use "global" as *;
 
 .l-main {
-  padding-top: 80px;
-
-  @include mq (o-sp) {
-    padding-top: 92px;
-  }
 }

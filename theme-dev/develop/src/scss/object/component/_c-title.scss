@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.c-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.c-title-jp {
+  font-size: rem(32);
+  margin-bottom: 8px;
+}
+
+.c-title-en {
+  font-size: rem(24);
+  color: $red;
+}
