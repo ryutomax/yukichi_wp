@@ -105,10 +105,14 @@ import sassGlob from "gulp-sass-glob-use-forward";
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import cleanCss from "gulp-clean-css";
+import cached from "gulp-cached";
+import newer from "gulp-newer";
 
 const cssTask = () => {
   return src(srcPath.scss)
     .pipe( plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }) ) // watch中にエラーが発生してもwatchが止まらないようにする
+    .pipe(cached('sass'))
+    .pipe(newer(distPath.css))
     .pipe( sassGlob() )                                 // glob機能
     .pipe( gulpSass({
       includePaths: ['./scss/']                         // sassコンパイル
