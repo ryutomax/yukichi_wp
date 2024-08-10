@@ -106,13 +106,26 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import cleanCss from "gulp-clean-css";
 import cached from "gulp-cached";
-import newer from "gulp-newer";
+import dependents from 'gulp-dependents'
+
+const dependentsConfig = {
+  ".scss": {
+    parserSteps: [
+    /(?:^|;|{|}|\*\/)\s*@(import|use|forward|include)\s+((?:"[^"]+"|'[^']+'|url\((?:"[^"]+"|'[^']+'|[^)]+)\)|meta\.load\-css\((?:"[^"]+"|'[^']+'|[^)]+)\))(?:\s*,\s*(?:"[^"]+"|'[^']+'|url\((?:"[^"]+"|'[^']+'|[^)]+)\)|meta\.load\-css\((?:"[^"]+"|'[^']+'|[^)]+)\)))*)(?=[^;]*;)/gm,
+    /"([^"]+)"|'([^']+)'|url\((?:"([^"]+)"|'([^']+)'|([^)]+))\)|meta\.load\-css\((?:"([^"]+)"|'([^']+)'|([^)]+))\)/gm
+    ],
+    prefixes: ["_"],
+    postfixes: [".scss", ".sass"],
+    basePaths: []
+  }
+};
 
 const cssTask = () => {
   return src(srcPath.scss)
     .pipe( plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }) ) // watch中にエラーが発生してもwatchが止まらないようにする
-    .pipe(cached('sass'))
-    .pipe(newer(distPath.css))
+    .pipe( sassGlob() )  
+    .pipe( cached('sass-cache'))                  // キャッシュを作成
+    .pipe( dependents(dependentsConfig))
     .pipe( sassGlob() )                                 // glob機能
     .pipe( gulpSass({
       includePaths: ['./scss/']                         // sassコンパイル
@@ -124,7 +137,7 @@ const cssTask = () => {
     .pipe(rename({
       extname: '-min.css'
     }))
-    .pipe(dest(distPath.css));
+    .pipe(dest(distPath.css))
 }
 // ========================================
 // img最適化
@@ -182,9 +195,10 @@ const buildTask = series(cssTask, imgTask, webpackTask, jsTask);
 // ========================================
 // ** watch管理(変更時)
 // ========================================
+
 const watchTask = () => {
-  watch(srcPath.img, { usePolling: true }, parallel(imgTask));
   watch(srcPath.scss, { usePolling: true }, parallel(cssTask));
+  watch(srcPath.img, { usePolling: true }, parallel(imgTask));
   watch(srcPath.js, { usePolling: true }, parallel(jsTask));
   watch(srcPath.js, { usePolling: true }, parallel(webpackTask));
 }
