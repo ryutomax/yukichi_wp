@@ -1,9 +1,9 @@
-<div class="p-menu-cont">
+<div class="p-menu-topping p-menu-cont">
 	<h4 class="p-menu-topping-ttl c-title">
 		<span class="c-title-jp">トッピング</span>
 		<span class="c-title-en">Topping</span>
 	</h4>
-  <ul class="p-menu-list">
+  <ul class="p-menu-topping-list">
 	<?php
 		$args = array(
 			'post_type' => 'menu',

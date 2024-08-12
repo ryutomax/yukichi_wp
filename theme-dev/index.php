@@ -5,7 +5,7 @@
 ?>
 <main class="l-main">
   <section class="p-top c-section">
-    <div class="p-top-inner">
+    <div class="p-top-inner c-section-inner">
       <div class="p-top-banner">
         <img src="" alt="" class="p-top-banner-img">
       </div>
@@ -99,8 +99,12 @@
       <?php get_template_part('template-menu/menu-ramen'); ?>
       <!-- お蕎麦 -->
       <?php get_template_part('template-menu/menu-soba'); ?>
+      <!-- おうどん -->
+      <?php get_template_part('template-menu/menu-udon'); ?>
       <!-- トッピング -->
       <?php get_template_part('template-menu/menu-topping'); ?>
+      <!-- カレー・丼 -->
+      <?php get_template_part('template-menu/menu-curry_don'); ?>
       <p class="p-menu-caption">※価格は税込です。※商品情報は一部となります。詳しくは店舗メニューよりご確認ください。<br>
       ※店舗の都合により、販売する数量や時間の限定、及び予告なく販売を中止させていただく場合もございますので、あらかじめご了承ください。</p>
     </div>
