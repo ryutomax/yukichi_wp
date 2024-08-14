@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.p-access {}
+
+.p-access-inner {}
+
+.p-access-ttl {}
+
+.p-access-cont {
+  display: flex;
+}
+
+.p-access-img {
+  width: 50%;
+  margin-right: 32px;
+}
+
+.p-access-info {
+  width: calc(100% - 50% - 32px);
+}
+
+.p-access-map {
+  width: 100%;
+  iframe {
+    width: 100%;
+  }
+}
+
+.p-access-meta {
+  line-height: 1.7;
+}
+

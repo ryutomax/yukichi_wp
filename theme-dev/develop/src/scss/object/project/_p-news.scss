@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.p-news {}
+
+.p-news-inner {}
+
+.p-news-ttl {}
+
+.p-news-img {}
+
+.p-news-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.p-news-itme {
+  margin-bottom: 16px;
+}
+
+.p-news-link {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-news-time {
+  margin-right: 12px;
+}
+
+.p-news-more {
+  border-radius: 20px;
+  border: 2px solid gray;
+  padding: 10px;
+  width: 160px;
+  margin-top: 40px;
+  background-color: #ff7f5000;
+}
