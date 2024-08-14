@@ -16,7 +16,7 @@ services:
       - mysql
     image: wordpress:6.5.5
     volumes:
-      - ./theme-dev:/var/www/html/wp-content/themes/${WP_THEME_NAME} #theme dev
+      - ../:/var/www/html/wp-content/themes/${WP_THEME_NAME} #theme dev
       ### ▼exclude directory ###
       - /var/www/html/wp-content/themes/${WP_THEME_NAME}/develop/node_modules
       - /var/www/html/wp-content/themes/${WP_THEME_NAME}/assets/
