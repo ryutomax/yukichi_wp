@@ -9,17 +9,20 @@ services:
   wordpress:
     <<: *app
     build:
-      context: ./Dockerfiles
+      context: ./
       args:
         - WP_THEME_NAME=${WP_THEME_NAME}
     depends_on:
       - mysql
     image: wordpress:6.5.5
     volumes:
-      - ./theme-dev:/var/www/html/wp-content/themes/${WP_THEME_NAME} #theme dev
-      ### ▼exclude directory ###
+      - ../:/var/www/html/wp-content/themes/${WP_THEME_NAME}
+      - ./package.json:/var/www/html/wp-content/themes/${WP_THEME_NAME}/develop/package.json
+      ### ▼no mount directory ###
+      - backup:/var/www/html/wp-content/themes/${WP_THEME_NAME}/backup
+      ### ▼no sync directory ###
       - /var/www/html/wp-content/themes/${WP_THEME_NAME}/develop/node_modules
-      - /var/www/html/wp-content/themes/${WP_THEME_NAME}/assets/
+      # - /var/www/html/wp-content/themes/${WP_THEME_NAME}/assets/
     ports:
       - "8000:80"
       - "9003:9003"
@@ -59,6 +62,5 @@ services:
   #    - ./phpmyadmin-misc.ini:/usr/local/etc/php/conf.d/phpmyadmin-misc.ini
 
 volumes:
-  # output_css:
-  # node_modules:
+  backup:
   db_data: {}

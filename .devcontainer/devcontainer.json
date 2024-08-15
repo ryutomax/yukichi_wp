@@ -1,8 +1,8 @@
 {
   "name": "wp-dev-docker",
-  "dockerComposeFile": "../docker-compose.yml",
+  "dockerComposeFile": "../docker-config/docker-compose.yml",
   "service": "wordpress",
-  "workspaceFolder": "/var/www/html/",
+  "workspaceFolder": "/var/www/html/wp-content/themes/yukichi",
   "forwardPorts": [
     9003
   ],

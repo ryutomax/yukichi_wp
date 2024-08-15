@@ -81,11 +81,11 @@ RUN	mkdir -p /var/www/html/wp-content/themes/${WP_THEME_NAME};
 
 WORKDIR /var/www/html/wp-content/themes/${WP_THEME_NAME}/develop
 USER root
-RUN	npm i -g yarn;
 COPY yarn.lock package.json package-lock.json ./
+RUN	npm i -g yarn;
 RUN yarn install;
 
 WORKDIR /var/www/html
 RUN chown -R www-data:www-data /var/www/html/
 RUN chmod g+w -R /var/www/html/
-RUN find /var/www/html/ -type d -exec chmod g+s {} \;
+RUN find /var/www/html/ -type d -exec chmod g+s {} \; 
