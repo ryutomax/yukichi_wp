@@ -2,10 +2,13 @@
 
 .p-footer {
   background-color: #9d8554;
-  padding: 8px;
+  padding: 24px 16px 16px 16px;
 }
 
-.p-footer-inner {}
+.p-footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 .p-footer-logo {
   width: 200px;

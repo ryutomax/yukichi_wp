@@ -10,19 +10,25 @@
   display: flex;
 }
 
+$mr: 64px;
 .p-access-img {
-  width: 50%;
-  margin-right: 32px;
+  width: calc((100% - $mr) / 2);
+  margin-right: $mr;
+  height: 32vw;
+  max-height: 480px;
 }
 
 .p-access-info {
-  width: calc(100% - 50% - 32px);
+  width: calc((100% - $mr) / 2);
 }
 
 .p-access-map {
   width: 100%;
+  margin-bottom: 8px;
   iframe {
     width: 100%;
+    height: 32vw;
+    max-height: 380px;
   }
 }
 

@@ -21,13 +21,13 @@
 		while ( $wp_query->have_posts() ):
 			$wp_query->the_post();
 	?>
-		<li class="p-menu-item">
+		<li class="p-menu-topping-item">
 			<h4 class="p-menu-name">
 				<span class="main"><?php the_field('メニュー名'); ?></span>
 				<span class="en"><?php the_field('メニュー名（英語）'); ?></span>
 			</h4>
 			<div class="p-menu-item-intro">
-				<span class="price"><?php the_field('値段'); ?>(税込み)</span>
+				<span class="price"><?php the_field('値段'); ?></span>
 			</div>
 		</li>
 	<?php endwhile; ?>

@@ -88,6 +88,8 @@ $mr: 20px;
   .main {
     font-size: $fs;
     font-weight: 700;
+    margin-bottom: 4px;
+    font-family: $ff-hand;
   }
 
   .en {
@@ -132,13 +134,26 @@ $mr: 20px;
 
 .p-menu-topping {
   background-color: #F3F3EC;
-  padding: 24px 16px;
+  padding: 40px 16px;
   box-shadow: inset 0px 3px 3px #00000066;
   border-radius: 30px;
 }
 
+$topping-mb: 32px;
 .p-menu-topping-list {
-  
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: -$topping-mb;
+}
+
+.p-menu-topping-item {
+  width: calc((100% - 48px) / 4);
+  margin-bottom: $topping-mb;
+
+  &:not(:nth-child(4n)) {
+    margin-right: 16px;
+  }
 }
 
 .p-menu-caption {

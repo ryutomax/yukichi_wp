@@ -18,9 +18,10 @@
             <a href="<?= esc_url(home_url('/')) ?>contact" class="p-footer-nav-link">掲載依頼・お問い合わせ</a>
           </div>
         </nav>
+        <small class="p-footer-copyright">Copyright &#169; DH Inc.CO.,LTD. All rights reserved.</small>
       </div>
       <!-- /.l-footer__inner -->
-      <small class="p-footer-copyright">Copyright &#169; DH Inc.CO.,LTD. All rights reserved.</small>
+      
       <?php wp_footer() ?>
     </footer>
   </body>
