@@ -22,7 +22,7 @@
 
 .fadein-zoomout-set {
   opacity: 0;
-  scale: 1.1;
+  scale: 1.05;
 }
 
 .fadein-zoomout-anime {
@@ -35,7 +35,7 @@
 @keyframes fadein-zoomout {
   0% {
     opacity: 0;
-    scale: 1.1;
+    scale: 1.05;
   }
 
   100% {

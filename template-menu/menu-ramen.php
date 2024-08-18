@@ -23,7 +23,7 @@
 		while ( $wp_query->have_posts() ):
 			$wp_query->the_post();
 	?>
-		<li class="p-menu-item">
+		<li class="p-menu-item fadein-set01">
 			<img class="p-menu-item-img" src="<?php the_field('メニュー画像'); ?>" alt="<?php the_field('メニュー名'); ?>">
 			<h4 class="p-menu-name">
 				<span class="sub"><?php the_field('メニューリード文'); ?></span>

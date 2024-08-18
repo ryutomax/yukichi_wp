@@ -62,7 +62,7 @@
 						$wp_query->the_post();
 				?>
           <?php if($news_count <= 5): ?>
-            <article class="p-news-itme">
+            <article class="p-news-itme fadein-set01">
               <a href="<?php the_permalink(); ?>" class="p-news-link">
                 <time datetime="<?= get_the_date('Y.m.d'); ?>" class="p-news-time"><?= get_the_date('Y.m.d'); ?></time>
                 <h4 class="p-news-item-ttl"><?php str_len($post->post_title, 30); ?></h4>
@@ -72,7 +72,7 @@
             <?php if ($news_count == 6): ?>
               <div class="p-news-hide" id="blind-area" style="display:none;">
             <?php endif; ?>
-              <article class="p-news-itme">
+              <article class="p-news-itme fadein-set01">
                 <a href="<?php the_permalink(); ?>" class="p-news-link">
                   <time datetime="<?= get_the_date('Y.m.d'); ?>" class="p-news-time"><?= get_the_date('Y.m.d'); ?></time>
                   <h4 class="p-news-time-ttl"><?php str_len($post->post_title, 30); ?></h4>
