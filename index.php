@@ -21,15 +21,15 @@
           </div>
         </div>
         <div class="p-top-main-cont">
-          <h2 class="p-top-main-copy">心躍る、<br>うまい<br>ラーメンを</h2>
+          <h2 class="p-top-main-copy fadein-zoomout-set">心躍る、<br>うまい<br>ラーメンを</h2>
           <div class="p-top-main-text">
-            <p class="p-top-main-text-jp">
+            <p class="p-top-main-text-jp fadein-set02">
               新しいのにどこか懐かしさを感じる味わいの<br>
               昔ながらの屋台味から、新しい味を取り入れたものまで<br>
               ラーメン、そば、うどん、カレーを手づくりしています。<br>
               それぞれの個性ある味わいをお楽しみください。
             </p>
-            <p class="p-top-main-text-en">
+            <p class="p-top-main-text-en fadein-set03">
               It has a taste that feels nostalgic even though it is new.<br>From traditional street food flavors to new flavors <br>We make ramen, soba, udon, and curry by hand. <br>Please enjoy the unique taste of each.
             </p>
           </div>
@@ -41,11 +41,11 @@
   </section>
   <section class="p-news c-section" id="news">
     <div class="p-news-inner c-section-inner">
-      <h3 class="p-news-ttl c-title">
+      <h3 class="p-news-ttl c-title fadein-zoomout-set">
         <span class="c-title-jp">おしらせ</span>
         <span class="c-title-en">NEWS</span>
       </h3>
-      <img src="" alt="" class="p-news-img">
+      <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/news/news_mv.png" alt="おしらせ" class="p-news-img">
       <div class="p-news-list">
         <?php
 					$args = array(
@@ -65,7 +65,7 @@
             <article class="p-news-itme">
               <a href="<?php the_permalink(); ?>" class="p-news-link">
                 <time datetime="<?= get_the_date('Y.m.d'); ?>" class="p-news-time"><?= get_the_date('Y.m.d'); ?></time>
-                <h4 class="p-news-time-ttl"><?php str_len($post->post_title, 30); ?></h4>
+                <h4 class="p-news-item-ttl"><?php str_len($post->post_title, 30); ?></h4>
               </a>
             </article>
           <?php else: ?>
@@ -100,8 +100,8 @@
   <section class="p-menu c-section" id="menu">
     <div class="p-menu-inner c-section-inner">
       <h3 class="p-menu-ttl c-title">
-        <span class="c-title-jp">おしながき</span>
-        <span class="c-title-en">MENU</span>
+        <span class="c-title-jp fadein-zoomout-set">おしながき</span>
+        <span class="c-title-en fadein-zoomout-set">MENU</span>
       </h3>
       <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/menu/menu_mv.png" alt="心躍る、うまいラーメンを" class="p-menu-img">
       <!-- ラーメン -->
@@ -119,9 +119,9 @@
     </div>
     <!-- /.p-menu-inner -->
   </section>
-  <section class="p-access c-section" id="access">
+  <section class="p-access c-section fadein-set" id="access">
     <div class="p-access-inner c-section-inner">
-      <h3 class="p-access-ttl c-title">
+      <h3 class="p-access-ttl c-title fadein-zoomout-set">
         <span class="c-title-jp">アクセス</span>
         <span class="c-title-en">ACCESS</span>
       </h3>
@@ -129,7 +129,7 @@
         <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/access/access_mv.png" alt="諭吉そば" class="p-access-img">
         <div class="p-access-info">
           <div class="p-access-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479746645863!2d139.7454329!3d35.6585805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1723253211003!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479746645863!2d139.7454329!3d35.6585805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1723253211003!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <p class="p-access-meta">
             千葉県松戸市小根本51-9 マツドKビル 1F <br>

@@ -18,7 +18,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -40%);
-    width: 100vw;
+    width: 100%;
     height: 270px;
     z-index: -1;
   }
@@ -39,7 +39,7 @@
   }
 }
 
-.p-menu-ramen-ttl {}
+.p-menu-cont-ttl {}
 
 .p-menu-text-jp {
   text-align: center;
@@ -49,6 +49,9 @@
 .p-menu-text-en {
   text-align: center;
   margin-bottom: 32px;
+  font-size: rem(12);
+  opacity: 0.8;
+  line-height: 1.5;
 }
 
 $mb: 40px;

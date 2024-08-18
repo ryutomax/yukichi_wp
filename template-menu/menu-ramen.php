@@ -1,5 +1,5 @@
 <div class="p-menu-cont">
-	<h4 class="p-menu-ramen-ttl c-title">
+	<h4 class="p-menu-cont-ttl c-title fadein-zoomout-set">
 		<span class="c-title-jp">ラーメン</span>
 		<span class="c-title-en">Soy-sauce Ramen</span>
 	</h4>

@@ -1,5 +1,5 @@
 <div class="p-menu-topping p-menu-cont">
-	<h4 class="p-menu-topping-ttl c-title">
+	<h4 class="p-menu-topping-ttl c-title fadein-zoomout-set">
 		<span class="c-title-jp">トッピング</span>
 		<span class="c-title-en">Topping</span>
 	</h4>

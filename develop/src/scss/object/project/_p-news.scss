@@ -6,7 +6,9 @@
 
 .p-news-ttl {}
 
-.p-news-img {}
+.p-news-img {
+  margin-bottom: 64px;
+}
 
 .p-news-list {
   display: flex;
@@ -29,6 +31,10 @@
 
 .p-news-time {
   margin-right: 28px;
+}
+
+.p-news-item-ttl {
+  font-weight: 500;
 }
 
 .p-news-more {

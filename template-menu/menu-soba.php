@@ -1,5 +1,5 @@
 <div class="p-menu-cont">
-	<h4 class="p-menu-ramen-ttl c-title">
+	<h4 class="p-menu-cont-ttl c-title fadein-zoomout-set">
 		<span class="c-title-jp">おそば</span>
 		<span class="c-title-en">Soba noodles</span></h4>
 	<p class="p-menu-text-jp">太めで弾力のある田舎蕎麦をしっかりした出汁が受け取と止める味わい深い一品。</p>

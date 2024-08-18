@@ -22,20 +22,20 @@
 
 .fadein-zoomout-set {
   opacity: 0;
-  scale: 1.2;
+  scale: 1.1;
 }
 
 .fadein-zoomout-anime {
   animation-name: fadein-zoomout;
   animation-duration: 0.7s;
-  animation-delay: 0.2s;
+  animation-delay: 0.4s;
   animation-fill-mode: forwards;
 }
 
 @keyframes fadein-zoomout {
   0% {
     opacity: 0;
-    scale: 1.2;
+    scale: 1.1;
   }
 
   100% {
