@@ -10,7 +10,16 @@
         <img src="" alt="" class="p-top-banner-img">
       </div>
       <div class="p-top-main" id="introduction">
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/greeting/greeting_mv.png" alt="心躍る、うまいラーメンを" class="p-top-main-img">
+        <div class="steamWrap fadein-set01">
+          <div class="steamBox">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/greeting/greeting_mv.png" alt="心躍る、うまいラーメンを" class="p-top-main-img">
+            <div class="steam01 c-steam"><img class="steam01-img" src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/steam01.png" alt="湯気"></div>
+            <div class="steam02 c-steam"><img class="steam02-img" src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/steam02.png" alt="湯気"></div>
+            <div class="steam03 c-steam"><img class="steam03-img" src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/steam01.png" alt="湯気"></div>
+            <div class="steam04 c-steam"><img class="steam04-img" src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/steam02.png" alt="湯気"></div>
+            <div class="steam05 c-steam"><img class="steam05-img" src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/steam01.png" alt="湯気"></div>
+          </div>
+        </div>
         <div class="p-top-main-cont">
           <h2 class="p-top-main-copy">心躍る、<br>うまい<br>ラーメンを</h2>
           <div class="p-top-main-text">

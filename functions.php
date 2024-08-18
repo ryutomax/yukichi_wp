@@ -15,12 +15,13 @@ add_action('wp_enqueue_scripts', 'enqueue_styles');
 function enqueue_scripts() {
 	$version = date('Ymd-Hi'); // バージョン番号を設定
 
-	if (is_home() || is_front_page()) {
-		wp_enqueue_script('top', get_theme_file_uri('/assets/js/parts/top-min.js'), [], $version, true);
-	}
-	if (is_single()||is_page('information')) {
-		wp_enqueue_script('single', get_theme_file_uri('/assets/js/parts/single-min.js'), [], $version, true);
-	}
+	wp_enqueue_script('animation', get_theme_file_uri('assets/js/parts/animation-min.js'), [], $version, true);
+	// if (is_home() || is_front_page()) {
+	// 	wp_enqueue_script('top', get_theme_file_uri('/assets/js/parts/top-min.js'), [], $version, true);
+	// }
+	// if (is_single()||is_page('information')) {
+	// 	wp_enqueue_script('single', get_theme_file_uri('/assets/js/parts/single-min.js'), [], $version, true);
+	// }
 	if (is_page('contact')) {
 		// wp_enqueue_script('datepicker', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', [], $version, true);
 		wp_enqueue_script('contact', get_theme_file_uri('/assets/js/parts/contact-min.js'), [], $version, true);
