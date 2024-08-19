@@ -7,7 +7,9 @@
   padding-top: 100px;
 }
 
-.p-header-inner {}
+.p-header-inner {
+  padding: 0 8px;
+}
 
 .p-header-top {}
 
@@ -42,6 +44,31 @@
   padding: 0 8px;
 }
 
+#header {
+  position: fixed;
+  top: -65px;
+  background-color: $white;
+  padding: 8px;
+  transition: top 0.7s;
+  
 
+  .p-header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  .p-header-logo {
+    display: block;
+    width: 160px;
+    margin: 0;
+  }
 
+  .p-header-nav-link {
+    writing-mode: horizontal-tb;
+    border-right: 0;
+  }
+}
+#header .is-scroll {
+  top: 0;
+}

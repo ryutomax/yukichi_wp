@@ -15,13 +15,13 @@
           </ul>
           <div class="p-footer-nav-btm">
             <a href="<?= esc_url(home_url('/')) ?>information" class="p-footer-nav-link">運営会社/利用規約/プライバシーポリシー</a>
-            <a href="<?= esc_url(home_url('/')) ?>contact" class="p-footer-nav-link">掲載依頼・お問い合わせ</a>
+            <a href="<?= esc_url(home_url('/')) ?>contact" class="p-footer-nav-link">/ お問い合わせ</a>
           </div>
         </nav>
-        <small class="p-footer-copyright">Copyright &#169; DH Inc.CO.,LTD. All rights reserved.</small>
+        
       </div>
       <!-- /.l-footer__inner -->
-      
+      <small class="p-footer-copyright">Copyright &#169; DH Inc.CO.,LTD. All rights reserved.</small>
       <?php wp_footer() ?>
     </footer>
   </body>

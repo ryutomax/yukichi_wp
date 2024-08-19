@@ -2,7 +2,13 @@
 <html lang="ja">
 
   <?php if (is_home() || is_front_page()) :?>
-    <?php $title = "TOP｜諭吉そば"; ?>
+    <?php $title = "諭吉そば"; ?>
+    <?php $description = '諭吉そば 心躍る、うまいラーメンを'; ?>
+  <?php elseif (is_page('contact')) :?>
+    <?php $title = "お問い合わせ｜諭吉そば"; ?>
+    <?php $description = '諭吉そば 心躍る、うまいラーメンを'; ?>
+  <?php elseif (is_single() && ('news' == get_post_type())) :?>
+    <?php $title = "おしらせ｜諭吉そば"; ?>
     <?php $description = '諭吉そば 心躍る、うまいラーメンを'; ?>
   <?php endif; ?>
   <head>
