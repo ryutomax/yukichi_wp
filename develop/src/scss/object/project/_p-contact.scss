@@ -99,6 +99,8 @@
 .p-input-label {
   width: 210px;
   letter-spacing: 0.01em;
+  margin-bottom: 8px;
+  display: block;
 
   @include mq (o-sp) {
     margin-bottom: 10px;
@@ -193,7 +195,8 @@ input[type=checkbox]:checked::after {
   opacity: 1;
 }
 
-.p-input-submit {
+.p-input-submit,
+.wpcf7-submit {
   background-image: url(../images/contact/icon_white_arrow.png);
   background-repeat: no-repeat;
   background-size: 12px;
@@ -224,14 +227,16 @@ input[type=checkbox]:checked::after {
 }
 
 .p-input-submit,
-.p-input-back {
-  display: inline-block;
+.p-input-back,
+.wpcf7-submit {
+  display: block;
   width: 250px;
   color: $white;
   background-color: $black;
   font-size: rem(18);
   border: none;
   line-height: 50px;
+  margin: 64px auto 0px auto;
 }
 
 .p-input-back {

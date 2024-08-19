@@ -1,42 +1,31 @@
 <?php
 /*
-Template Name: 取材申込フォーム
+Template Name: お問い合わせフォーム
 */
 ?>
 <?php get_template_part('template-parts/head') ?>
 <?php get_template_part('template-parts/header') ?>
 <main class="l-main">
-  <?php
-    $args = [
-      'breadcrumb_slug_arr' => [],
-      'breadcrumb_arr' => ['掲載依頼・お問い合わせ']
-    ];
-    get_template_part('template-parts/breadcrumb', null, $args);
-  ?>
-
   <div class="p-contact">
     <div class="p-contact-head">
-      <h3 class="p-contact-head-title">For Artist/Creator</h3>
-      <p class="p-contact-head-intro">Lotusでは、様々なアーティストの<br class="u-sp-show">皆様の声を募っています。<br
-        >当サイトを通じて、各種イベントや<br class="u-sp-show">プロモーション活動のお手伝いをいたします。<br>
-        皆様からのコンタクトをお待ちしております。
-      </p>
     </div>
     <div class="p-contact-form">
-      <h2 class="p-contact-form-title">取材申込フォーム</h2>
+      <h3 class="p-contact-ttl c-title">
+        <span class="c-title-jp">お問い合わせ</span>
+        <span class="c-title-en">CONTACT</span>
+      </h3>
       <p class="p-contact-form-caption">＊印は必須入力項目です。</p>
       <?php
-      // ここにページの他のコンテンツやテンプレートコードを追加
+        // ここにページの他のコンテンツやテンプレートコードを追加
 
-      // ショートコードを呼び出してフォームを表示
-      echo do_shortcode('[mwform_formkey key="130"]');
+        // ショートコードを呼び出してフォームを表示
+        echo do_shortcode('[contact-form-7 id="a84adb9" title="お問い合わせフォーム"]');
 
-      // ここにページの他のコンテンツやテンプレートコードを追加
+        // ここにページの他のコンテンツやテンプレートコードを追加
       ?>
     </div>
     <!-- /.p-contact-form -->
   </div>
-  <?php get_template_part('template-parts/recommend') ?>
 </main>
 <?php get_template_part('template-parts/footer') ?>
 
