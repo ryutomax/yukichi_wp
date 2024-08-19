@@ -3,7 +3,7 @@ export default class Animation {
     // ========================================
     // コンテンツ　スクロールアニメーション 
     // ========================================
-    for(let i = 0; i <= 12; i++) {
+    for(let i = 0; i <= 10; i++) {
       if (i < 10) {
         fadeInAnimation(`.fadein-set0${i}`, 'fadein-anime');
       } else {
@@ -58,11 +58,20 @@ export default class Animation {
     // ========================================
     // ヘッダー　スクロール変形
     // ========================================
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", () => {
       // ヘッダーを変数の中に格納する
-      const header = document.querySelector("#header");
-
-      header.classList.toggle("is-scroll", window.scrollY > 100 + header.clientHeight);
+      const header = document.querySelector(".js-header");
+      header.classList.toggle("is-scroll", window.scrollY > 150 + header.clientHeight);
+    });
+    // リロード監視
+    window.addEventListener("load", () => {
+      const header = document.querySelector(".js-header");
+      // スクロール位置に応じてクラスを適用
+      if (window.scrollY > 150 + header.clientHeight) {
+        header.classList.add("is-scroll");
+      } else {
+        header.classList.remove("is-scroll");
+      }
     });
   }
 }

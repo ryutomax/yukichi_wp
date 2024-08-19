@@ -6,6 +6,7 @@
 <main class="l-main">
   <section class="p-top c-section">
     <div class="p-top-inner c-section-inner">
+      <?php get_template_part('template-parts/top-header'); ?>
       <div class="p-top-banner">
         <img src="" alt="" class="p-top-banner-img">
       </div>
@@ -125,7 +126,7 @@
         <span class="c-title-jp">アクセス</span>
         <span class="c-title-en">ACCESS</span>
       </h3>
-      <div class="p-access-cont">
+      <div class="p-access-cont fadein-set01">
         <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/access/access_mv.png" alt="諭吉そば" class="p-access-img">
         <div class="p-access-info">
           <div class="p-access-map">

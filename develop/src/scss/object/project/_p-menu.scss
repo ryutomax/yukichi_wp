@@ -112,6 +112,7 @@ $mr: 20px;
   .en {
     line-height: 1.5;
     margin-bottom: 12px;
+    font-size: rem(14);
   }
 
   .price {
@@ -129,6 +130,7 @@ $mr: 20px;
 .p-menu-temp {
   display: flex;
   justify-content: center;
+  margin-bottom: 16px;
   img {
     margin: 4px;
     width: 32px;

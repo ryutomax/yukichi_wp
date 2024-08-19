@@ -3,14 +3,20 @@
 	get_template_part('template-parts/header');
 ?>
 <main class="l-main">
+	<section class="p-top c-section">
+		<div class="p-top-inner c-section-inner">
+		<?php get_template_part('template-parts/top-header'); ?>
+		</div>
+	</section>
 	<section class="p-newsSingle c-section">
 		<div class="p-newsSingle-inner c-section-inner">
 			<h3 class="p-news-ttl c-title fadein-zoomout-set">
-        <span class="c-title-jp">おしらせ</span>
-        <span class="c-title-en">NEWS</span>
-      </h3>
+				<span class="c-title-jp">おしらせ</span>
+				<span class="c-title-en">NEWS</span>
+			</h3>
 			<div class="p-newsSingle-cont">
-				<?php the_title(); ?>
+				<time datetime="<?= get_the_date('Y.m.d'); ?>" class="p-newsSingle-time"><?= get_the_date('Y.m.d'); ?></time>
+				<h3 class="p-newsSingle-ttl"><?php the_title(); ?></h3>
 				<?php the_content(); ?>
 			</div>
 		</div>
