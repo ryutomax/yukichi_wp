@@ -28,25 +28,19 @@ add_action('wp_enqueue_scripts', 'enqueue_scripts');
 // // ========================================
 // // お問い合わせ バリデーションメッセージ変更
 // // ========================================
-// function my_exam_validation_rule( $Validation, $data, $Data ) {
+function my_exam_validation_rule( $Validation, $data, $Data ) {
 
-// 	$Validation->set_rule( '貴社名(部署名)', 'noEmpty', array( 'message' => '必須項目です。' ) );
-// 	$Validation->set_rule( '媒体名・番組名', 'noEmpty', array( 'message' => '必須項目です。' ) );
-// 	$Validation->set_rule( 'ご担当者様氏名', 'noEmpty', array( 'message' => '必須項目です。' ) );
-// 	$Validation->set_rule( 'メールアドレス', 'noEmpty', array( 'message' => '必須項目です。' ) );
-// 	// $Validation->set_rule( 'メールアドレス', 'mail', array( 'message' => '形式を確認してください。' ) );
-// 	// $Validation->set_rule( 'メールアドレス（確認用）', 'noEmpty', array( 'message' => '※メールアドレス（確認用）を入力してください。' ) );
-// 	// $Validation->set_rule( 'メールアドレス（確認用）', 'eq', array( 'message' => '※メールアドレスが一致しません。' ) );
-// 	$Validation->set_rule( '連絡可能な電話番号', 'noEmpty', array( 'message' => '必須項目です。' ) );
-// 	$Validation->set_rule( '取材内容・趣旨', 'noEmpty', array( 'message' => '必須項目です。' ) );
-// 	$Validation->set_rule( '取材方法', 'noEmpty', array( 'message' => '必須項目です。' ) );
-// 	$Validation->set_rule( '取材希望日時または期限', 'noEmpty', array( 'message' => '必須項目です。' ) );
-// 	$Validation->set_rule( '撮影の有無', 'noEmpty', array( 'message' => '必須項目です。' ) );
+	$Validation->set_rule( 'お名前', 'noEmpty', array( 'message' => '必須項目です。' ) );
+	$Validation->set_rule( 'メールアドレス', 'noEmpty', array( 'message' => '必須項目です。' ) );
+	$Validation->set_rule( 'お問い合わせ内容', 'noEmpty', array( 'message' => '必須項目です。' ) );
+	$Validation->set_rule( 'メールアドレス', 'mail', array( 'message' => '形式を確認してください。' ) );
+	// $Validation->set_rule( 'メールアドレス（確認用）', 'noEmpty', array( 'message' => '※メールアドレス（確認用）を入力してください。' ) );
+	// $Validation->set_rule( 'メールアドレス（確認用）', 'eq', array( 'message' => '※メールアドレスが一致しません。' ) );
 
-// 	return $Validation;
-// }
-// // キー指定）mwform_validation_mw-wp-form-OOO
-// add_filter( 'mwform_validation_mw-wp-form-130', 'my_exam_validation_rule', 10, 3 );
+	return $Validation;
+}
+// キー指定）mwform_validation_mw-wp-form-OOO
+add_filter( 'mwform_validation_mw-wp-form-117', 'my_exam_validation_rule', 10, 3 );
 
 //カスタム投稿タイプ生成 呼び出し
 function create_post_type() {
