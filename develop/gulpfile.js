@@ -6,6 +6,7 @@
 //  モジュール読み込み
 //----------------------------------------------------------------------
 import { src, dest, watch, series, parallel } from "gulp";
+import gulp from "gulp";
 
 import plumber from "gulp-plumber";
 import notify from "gulp-notify";                 //通知
@@ -145,12 +146,15 @@ const cssTask = () => {
 import imageMin from "gulp-imagemin";              // yarn add gulp-imagemin@7.1.0
 import mozjpeg from "imagemin-mozjpeg";
 import pngquant from "imagemin-pngquant";
-import changed from "gulp-changed";
+// import changed from "gulp-changed";
 
 const imgTask = () => {
-  return src(srcPath.img, {encoding: false})
+  return src(srcPath.img, {
+    since: gulp.lastRun(imgTask),
+    encoding: false
+  })
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(changed(distPath.img))
+    // .pipe(changed(distPath.img))
     .pipe(
       imageMin([
         pngquant({

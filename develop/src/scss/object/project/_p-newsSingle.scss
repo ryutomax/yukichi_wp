@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.p-newsSingle {
+  min-height: 500px;
+}
+
+.p-newsSingle-inner {}
+
+.p-newsSingle-cont {}
+
+.p-newsSingle-time {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.p-newsSingle-ttl {
+  font-size: rem(24);
+}

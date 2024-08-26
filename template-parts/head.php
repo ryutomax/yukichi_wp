@@ -2,7 +2,13 @@
 <html lang="ja">
 
   <?php if (is_home() || is_front_page()) :?>
-    <?php $title = "TOP｜諭吉そば"; ?>
+    <?php $title = "諭吉そば"; ?>
+    <?php $description = '諭吉そば 心躍る、うまいラーメンを'; ?>
+  <?php elseif (is_page('contact')) :?>
+    <?php $title = "お問い合わせ｜諭吉そば"; ?>
+    <?php $description = '諭吉そば 心躍る、うまいラーメンを'; ?>
+  <?php elseif (is_single() && ('news' == get_post_type())) :?>
+    <?php $title = "おしらせ｜諭吉そば"; ?>
     <?php $description = '諭吉そば 心躍る、うまいラーメンを'; ?>
   <?php endif; ?>
   <head>
@@ -16,8 +22,8 @@
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/sib3tig.css">
     <!--favicon-->
-    <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/icons/favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/favicons/favicon.png" sizes="16x16">
     <!--絶対パスで記述-->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="<?= $title ?>" />

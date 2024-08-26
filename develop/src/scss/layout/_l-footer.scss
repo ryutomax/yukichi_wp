@@ -8,20 +8,47 @@
 .p-footer-inner {
   max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .p-footer-logo {
   width: 200px;
+  margin-bottom: 16px;
 }
 
 .p-footer-logo-link {}
 
 .p-footer-logo-img {}
 
+.p-footer-icons {
+  display: flex;
+}
+
+.p-footer-icon {
+  width: 28px;
+  margin: 0 8px;
+}
+
+.p-footer-icon-img {}
+
 .p-footer-nav {}
 
 .p-footer-nav-top {}
 
-.p-footer-nav-btm {}
+.p-footer-nav-btm {
+  margin-bottom: 16px;
+}
 
-.p-footer-copyright {}
+.p-footer-nav-link {
+  color: $white;
+  font-size: rem(14);
+}
+
+.p-footer-copyright {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: $white;
+  font-size: rem(12);
+}

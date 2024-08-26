@@ -1,4 +1,4 @@
-<header id="header" class="p-header u-zindex_1000">
+<header id="header" class="p-header js-header u-zindex_1000">
   <div class="p-header-inner">
     <div class="p-header-top">
       <h1 class="p-header-logo c-logo fadein-zoomout-set">
@@ -15,10 +15,10 @@
     <!-- /.p-header-top -->
     <div class="p-header-btm js-menu-show">
       <nav class="p-header-nav">
-        <div class="p-header-nav-item js-menu-text01 fadein-set04"><a href="<?= esc_url(home_url('/')) ?>#introduction" class="p-header-nav-link">ごあいさつ</a></div>
-        <div class="p-header-nav-item js-menu-text3 fadein-set05"><a href="<?= esc_url(home_url('/')) ?>#news" class="p-header-nav-link">おしらせ</a></div>
-        <div class="p-header-nav-item js-menu-text02 fadein-set06"><a href="<?= esc_url(home_url('/')) ?>#menu" class="p-header-nav-link">おしながき</a></div>
-        <div class="p-header-nav-item js-menu-text02 fadein-set07"><a href="<?= esc_url(home_url('/')) ?>#access" class="p-header-nav-link">アクセス</a></div>
+        <div class="p-header-nav-item fadein-set04"><a href="<?= esc_url(home_url('/')) ?>#introduction" class="p-header-nav-link">ごあいさつ</a></div>
+        <div class="p-header-nav-item fadein-set05"><a href="<?= esc_url(home_url('/')) ?>#news" class="p-header-nav-link">おしらせ</a></div>
+        <div class="p-header-nav-item fadein-set06"><a href="<?= esc_url(home_url('/')) ?>#menu" class="p-header-nav-link">おしながき</a></div>
+        <div class="p-header-nav-item fadein-set07"><a href="<?= esc_url(home_url('/')) ?>#access" class="p-header-nav-link">アクセス</a></div>
       </nav>
       <!-- /.p-header-nav -->
     </div>

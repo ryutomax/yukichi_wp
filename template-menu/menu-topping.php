@@ -21,7 +21,7 @@
 		while ( $wp_query->have_posts() ):
 			$wp_query->the_post();
 	?>
-		<li class="p-menu-topping-item">
+		<li class="p-menu-topping-item fadein-set01">
 			<h4 class="p-menu-name">
 				<span class="main"><?php the_field('メニュー名'); ?></span>
 				<span class="en"><?php the_field('メニュー名（英語）'); ?></span>
