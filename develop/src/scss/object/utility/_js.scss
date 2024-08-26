@@ -4,9 +4,6 @@
 
 .is-menu-show {
   display: block;
-}
-
-.is-menu-show {
   animation-name: menu-background;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -51,22 +48,26 @@
 }
 
 .js-menu-btn-bar {
-  transition: all 0.1s;
+  transition: all 0.3s;
 }
 
-.is-bar-move {
-  left: 33%;
+.is-bar-move > .js-menu-btn-bar {
   transform-origin: 50% 50%;
 
   &:first-child {
     transform: rotate(45deg);
     top: 50%;
-
+    left: 0;
   }
 
   &:nth-child(2) {
+    opacity: 0;
+  }
+
+  &:nth-child(3) {
     transform: rotate(-45deg);
     top: 50%;
+    left: 0;
   }
 
   @include mq (o-tb) {

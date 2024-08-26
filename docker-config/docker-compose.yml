@@ -20,6 +20,7 @@ services:
       - ./package.json:/var/www/html/wp-content/themes/${WP_THEME_NAME}/develop/package.json
       ### ▼no mount directory ###
       - backup:/var/www/html/wp-content/themes/${WP_THEME_NAME}/WP_BK
+      - theme-dev:/var/www/html/wp-content/themes/${WP_THEME_NAME}/theme-dev
       ### ▼no sync directory ###
       - /var/www/html/wp-content/themes/${WP_THEME_NAME}/develop/node_modules
       # - /var/www/html/wp-content/themes/${WP_THEME_NAME}/assets/

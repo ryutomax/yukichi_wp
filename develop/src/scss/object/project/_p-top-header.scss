@@ -27,7 +27,12 @@
 
 .p-top-header-menuBtn-bar {}
 
-.p-top-header-btm {}
+.p-top-header-btm {
+  display: none;
+  @include mq (o-sp) {
+    display: block;
+  }
+}
 
 .p-top-header-nav {
   display: flex;

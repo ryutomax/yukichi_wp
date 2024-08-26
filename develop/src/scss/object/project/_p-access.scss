@@ -8,18 +8,33 @@
 
 .p-access-cont {
   display: flex;
+  flex-direction: column;
+
+  @include mq (o-sp) {
+    flex-direction: row;
+  }
 }
 
 $mr: 64px;
 .p-access-img {
-  width: calc((100% - $mr) / 2);
-  margin-right: $mr;
-  height: 32vw;
-  max-height: 480px;
+  width: 100%;
+  margin-bottom: 24px;
+  height: 60vw;
+  object-fit: cover;
+
+  @include mq (o-sp) {
+    width: calc((100% - $mr) / 2);
+    margin-right: $mr;
+    height: 32vw;
+    max-height: 480px;
+  }
 }
 
 .p-access-info {
-  width: calc((100% - $mr) / 2);
+  width: 100%;
+  @include mq (o-sp) {
+    width: calc((100% - $mr) / 2);
+  }
 }
 
 .p-access-map {

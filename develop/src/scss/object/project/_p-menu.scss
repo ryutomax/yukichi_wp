@@ -54,21 +54,36 @@
   line-height: 1.5;
 }
 
+
 $mb: 40px;
+$mr: 20px;
+
 .p-menu-list {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -$mb;
 }
 
-$mr: 20px;
 .p-menu-item {
-  width: calc((100% - $mr*2) / 3);
+  width: calc((100% - $mr*2) / 2);
   margin-bottom: $mb;
 
-  &:not(:nth-child(3n)) {
+  &:not(:nth-child(2n)) {
     margin-right: $mr;
+  }
 
+  @include mq (o-sp) {
+
+    width: calc((100% - $mr*2) / 3);
+    margin-bottom: $mb;
+    &:not(:nth-child(2n)) {
+      margin-right: 0;
+    }
+
+    &:not(:nth-child(3n)) {
+      margin-right: $mr;
+
+    }
   }
 }
 
@@ -119,6 +134,7 @@ $mr: 20px;
     font-size: rem(20);
     color: $gold;
     text-align: center;
+    font-weight: 600;
     &::after {
       content: "(税込)";
       font-size: 65%;

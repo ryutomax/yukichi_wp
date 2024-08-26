@@ -9,10 +9,13 @@
 
 .p-header {
   position: fixed;
-  top: -65px;
-  background-color: $white;
+  top: 0;
   padding: 8px;
   transition: top 0.5s;
+  @include mq (o-sp) {
+    background-color: $white;
+    top: -65px;
+  }
 }
 
 .p-header-inner {
@@ -26,34 +29,120 @@
   display: block;
   width: 160px;
   margin: 0;
+  opacity: 0;
+  @include mq (o-sp) {
+    opacity: 1;
+  }
+  
 }
 
-.p-header-top {}
-
+.p-header-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.p-header-logo-img {
+  opacity: 0; 
+  @include mq (o-sp) {
+    opacity: 1;
+  }
+}
 .p-header-logo-link {
   img {}
 }
 
-.p-header-menuBtn {}
+.p-header-menuBtn {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 22px;
+  background-color: rgba(255, 255, 255, 0);
+  @include mq (o-sp) {
+    display: none;
+  }
+}
 
-.p-header-menuBtn-bar {}
+.p-header-menuBtn-bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: $gold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-.p-header-btm {}
+  &:first-child {
+    top: 0%;
+  }
+
+  &:nth-child(2) {
+  }
+
+  &:nth-child(3) {
+    top: 100%;
+  }
+}
+
+.p-header-btm {
+  display: none;
+  position: relative;
+  @include mq (o-sp) {
+    display: flex;
+    justify-content: center;
+  }
+}
 
 .p-header-nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fffffff0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-100% + 16px), -32px);
+  padding-top: 120px;
+  @include mq (o-sp) {
+    position: relative;
+    flex-direction: row;
+    width: 450px;
+    height: auto;
+    top: 0;
+    left: 0;
+    transform: none;
+    padding-top: 0px;
+  }
 }
+
 .p-header-nav-item {
   margin: 0 12px;
+  margin-bottom: 28px;
+  @include mq (o-sp) {
+    margin-bottom: 0;
+  }
 }
 .p-header-nav-link {
   font-family: $ff-hand;
   padding: 0 8px;
   border-right: 0;
+  text-align: center;
+  font-size: rem(24);
+  margin-bottom: 16px;
+  @include mq (o-sp) {
+    font-size: rem(16);
+    margin-bottom: 0;
+  }
 }
 
 .is-scroll {
-  top: 0;
-  box-shadow: 2px 2px 6px #00000026
+  @include mq (o-sp) {
+    top: 0;
+    box-shadow: 2px 2px 6px #00000026;
+  }
 }

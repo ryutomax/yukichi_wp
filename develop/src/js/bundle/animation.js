@@ -73,5 +73,41 @@ export default class Animation {
         header.classList.remove("is-scroll");
       }
     });
+
+
+    // ========================================
+    // ヘッダー　グローバルメニュー
+    // ========================================
+    const menuBtn = document.querySelector(".js-menu-btn");
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("is-bar-move");
+
+      const menu = document.querySelector(".js-menu-show");
+      menu.classList.toggle("is-menu-show");
+
+      const bg = document.querySelector(".js-load");
+      bg.classList.toggle("is-stay");
+
+      const elements = document.querySelectorAll(".p-header-nav-item.fadein-set04, .p-header-nav-item.fadein-set05, .p-header-nav-item.fadein-set06, .p-header-nav-item.fadein-set07");
+
+      elements.forEach(element => {
+        
+        element.classList.toggle("fadein-anime");
+      });
+    });
+
+    const links = document.querySelectorAll(".p-header-nav-link");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        menuBtn.classList.remove("is-bar-move");
+  
+        const menu = document.querySelector(".js-menu-show");
+        menu.classList.remove("is-menu-show");
+  
+        const bg = document.querySelector(".js-load");
+        bg.classList.remove("is-stay");
+      });
+    });
+    
   }
 }
