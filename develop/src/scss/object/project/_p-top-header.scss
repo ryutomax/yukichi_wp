@@ -14,9 +14,14 @@
 
 .p-top-header-logo {
   display: block;
-  width: 340px;
+  min-width: 200px;
+  width: 60%;
+  max-width: 340px;
   margin: 0 auto;
   margin-bottom: 32px;
+
+  @include mq (o-sp) {
+  }
 }
 
 .p-top-header-logo-link {

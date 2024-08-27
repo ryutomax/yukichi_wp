@@ -1,6 +1,6 @@
 <div class="p-menu-cont">
 	<h4 class="p-menu-cont-ttl c-title fadein-zoomout-set">
-		<span class="c-title-jp">カレー・丼</span>
+		<span class="c-title-jp">ご飯もの</span>
 		<span class="c-title-en">Rice</span>
 	</h4>
 	<p class="p-menu-text-jp fadein-set01">まろやかな醤油の味わい、チャーシュー丼との相性も抜群です。</p>

@@ -25,6 +25,10 @@
   width: 200px;
   margin-bottom: 16px;
   order: 2;
+
+  @include mq (o-sp) {
+    order: 1;
+  }
 }
 
 .p-footer-logo-link {}
@@ -35,6 +39,9 @@
   display: flex;
   order: 1;
   margin-bottom: 24px;
+  @include mq (o-sp) {
+    order: 2;
+  }
 }
 
 .p-footer-icon {
@@ -63,7 +70,7 @@
   color: $white;
   font-size: rem(12);
   margin-bottom: 24px;
-  width: 230px;
+  text-align: center;
   @include mq (o-sp) {
     display: none;
   }

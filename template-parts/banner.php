@@ -10,9 +10,9 @@
 			while ( $wp_query->have_posts() ):
 				$wp_query->the_post();
 	?>
-    <div class="p-top-banner">
-      <img src="<?php the_post_thumbnail_url(); ?>" alt="<?= the_title(); ?>" class="p-top-banner-img">
-    </div>
+		<a href="<?php the_field('バナーリンク'); ?>" class="p-top-banner">
+			<img src="<?php the_post_thumbnail_url(); ?>" alt="<?= the_title(); ?>" class="p-top-banner-img">
+		</a>
     <?php endwhile; ?>
 	<?php else: ?>
 	<?php

@@ -8,12 +8,26 @@
 .p-top-inner {}
 
 .p-top-banner {
+  display: block;
+  margin: 0px auto;
+  max-width: 500px;
+
+  @include mq (o-sp) {
+    margin: 64px auto 0px auto;
+  }
   img {}
 }
 
 .p-top-main {}
 
-.p-top-main-img {}
+img.p-top-main-img {
+  object-fit: cover;
+  height: 70vw;
+
+  @include mq (o-sp) {
+    max-height: 450px;
+  }
+}
 
 .p-top-main-cont {
   display: flex;
@@ -28,12 +42,15 @@
 }
 
 .p-top-main-copy {
-  font-size: rem(56);
+  font-size: rem(48);
   writing-mode: vertical-rl;
   font-family: $ff-hand;
   display: flex;
   align-items: center;
+  margin-bottom: 32px;
   @include mq (o-sp) {
+    font-size: rem(56);
+    margin-bottom: 0;
   }
 }
 
@@ -41,16 +58,27 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 40px;
+  width: 320px;
+  margin: 0 auto;
+  font-size: rem(12);
+  line-height: 1.5;
+  text-shadow: 1px 1px 12px #a19f9f;
+
+  @include mq (o-sp-m) {
+    width: 420px;
+    font-size: rem(16);
+  }
+
+  @include mq (o-sp) {
+    margin: 0;
+    margin-right: 40px;
+  }
 }
 
 .p-top-main-text-jp {
-  font-size: rem(16);
   margin-bottom: 24px;
-  line-height: 1.5;
+  
 }
 
 .p-top-main-text-en {
-  font-size: rem(16);
-  line-height: 1.5;
 }

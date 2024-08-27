@@ -7,7 +7,9 @@
   <section class="p-top c-section">
     <div class="p-top-inner c-section-inner">
       <?php get_template_part('template-parts/top-header'); ?>
-      <?php get_template_part('template-parts/banner'); ?>      
+      <div class="u-sp-show">
+        <?php get_template_part('template-parts/banner'); ?>
+      </div>
       <div class="p-top-main" id="introduction">
         <div class="steamWrap fadein-set01">
           <div class="steamBox">
@@ -64,7 +66,8 @@
             <article class="p-news-itme fadein-set01">
               <a href="<?php the_permalink(); ?>" class="p-news-link">
                 <time datetime="<?= get_the_date('Y.m.d'); ?>" class="p-news-time"><?= get_the_date('Y.m.d'); ?></time>
-                <h4 class="p-news-item-ttl"><?php str_len($post->post_title, 30); ?></h4>
+                <h4 class="p-news-item-ttl u-sp-none"><?php str_len($post->post_title, 20); ?></h4>
+                <h4 class="p-news-item-ttl u-sp-show"><?php str_len($post->post_title, 30); ?></h4>
               </a>
             </article>
           <?php else: ?>
@@ -95,6 +98,9 @@
       <?php if($news_num > 5): ?>
         <button id="more" class="p-news-more">MORE</button>
       <?php endif; ?>
+      <div class="u-sp-none">
+        <?php get_template_part('template-parts/banner'); ?>
+      </div>
     </div>
     <!-- /.p-news-inner -->
   </section>

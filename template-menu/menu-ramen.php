@@ -1,7 +1,7 @@
 <div class="p-menu-cont">
 	<h4 class="p-menu-cont-ttl c-title fadein-zoomout-set">
 		<span class="c-title-jp">ラーメン</span>
-		<span class="c-title-en">Soy-sauce Ramen</span>
+		<span class="c-title-en">Ramen</span>
 	</h4>
 	<p class="p-menu-text-jp fadein-set01">まろやかな醤油の味わい、チャーシュー丼との相性も抜群です。</p>
 	<p class="p-menu-text-en fadein-set01">The mellow soy sauce taste goes perfectly with the chashu rice bowl.<br>The compatibility is also excellent.</p>
