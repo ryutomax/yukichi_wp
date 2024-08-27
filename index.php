@@ -7,9 +7,7 @@
   <section class="p-top c-section">
     <div class="p-top-inner c-section-inner">
       <?php get_template_part('template-parts/top-header'); ?>
-      <div class="p-top-banner">
-        <img src="" alt="" class="p-top-banner-img">
-      </div>
+      <?php get_template_part('template-parts/banner'); ?>      
       <div class="p-top-main" id="introduction">
         <div class="steamWrap fadein-set01">
           <div class="steamBox">

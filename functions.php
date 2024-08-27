@@ -52,7 +52,7 @@ function create_post_type() {
 add_action( 'init', 'create_post_type' );
 
 //アイキャッチ画像有効化
-// add_theme_support( 'post-thumbnails' );
+add_theme_support('post-thumbnails', ['post','page','banner']);
 
 //投稿タイプ生成
 function post_type_template ($postTypeName, $label, $menuPosition, $is_menu) {
@@ -67,7 +67,6 @@ function post_type_template ($postTypeName, $label, $menuPosition, $is_menu) {
 			'supports' =>  [  // 初期値 title と editor のみ
 				'title',  // 記事タイトル
 				'editor',  // 記事本文
-				'thumbnail',  // アイキャッチ画像
 				'revisions'  // リビジョン
 			]
 		]
