@@ -38,7 +38,7 @@
 		</li>
 	<?php endwhile; ?>
 	<?php else: ?>
-		<p>準備中</p>
+		<p class="p-menu-ready">準備中</p>
 	<?php
 		endif;
 		wp_reset_postdata();

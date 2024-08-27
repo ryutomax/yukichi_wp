@@ -20,26 +20,26 @@
 		);
 		$wp_query = new WP_Query( $args );
 		if ( $wp_query->have_posts() ):
-		while ( $wp_query->have_posts() ):
-			$wp_query->the_post();
+			while ( $wp_query->have_posts() ):
+				$wp_query->the_post();
 	?>
-		<li class="p-menu-item fadein-set01">
-			<img class="p-menu-item-img" src="<?php the_field('メニュー画像'); ?>" alt="<?php the_field('メニュー名'); ?>">
-			<h4 class="p-menu-name">
-				<span class="sub"><?php the_field('メニューリード文'); ?></span>
-				<span class="main"><?php the_field('メニュー名'); ?></span>
-				<span class="en"><?php the_field('メニュー名（英語）'); ?></span>
-			</h4>
-			<?php get_template_part('template-parts/acf_hot_cool'); ?>
-			<div class="p-menu-item-intro">
-				<p class="jp"><?php the_field('メニュー詳細'); ?></p>
-				<p class="en"><?php the_field('メニュー詳細（英語）'); ?></p>
-				<span class="price"><?php the_field('値段'); ?></span>
-			</div>
-		</li>
-	<?php endwhile; ?>
+			<li class="p-menu-item fadein-set01">
+				<img class="p-menu-item-img" src="<?php the_field('メニュー画像'); ?>" alt="<?php the_field('メニュー名'); ?>">
+				<h4 class="p-menu-name">
+					<span class="sub"><?php the_field('メニューリード文'); ?></span>
+					<span class="main"><?php the_field('メニュー名'); ?></span>
+					<span class="en"><?php the_field('メニュー名（英語）'); ?></span>
+				</h4>
+				<?php get_template_part('template-parts/acf_hot_cool'); ?>
+				<div class="p-menu-item-intro">
+					<p class="jp"><?php the_field('メニュー詳細'); ?></p>
+					<p class="en"><?php the_field('メニュー詳細（英語）'); ?></p>
+					<span class="price"><?php the_field('値段'); ?></span>
+				</div>
+			</li>
+			<?php endwhile; ?>
 	<?php else: ?>
-		<p>準備中</p>
+		<p class="p-menu-ready">準備中</p>
 	<?php
 		endif;
 		wp_reset_postdata();
