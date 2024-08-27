@@ -47,6 +47,7 @@ function create_post_type() {
 
 	post_type_template('menu', 'おしながき', 7, true);
 	post_type_template('news', 'お知らせ', 8, false);
+	post_type_template('banner', 'バナー', 9, false);
 }
 add_action( 'init', 'create_post_type' );
 
