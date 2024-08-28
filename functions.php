@@ -13,12 +13,7 @@ add_action('wp_enqueue_scripts', 'enqueue_styles');
 function enqueue_scripts() {
 	$version = date('Ymd-Hi'); // バージョン番号を設定
 
-	// if (is_home() || is_front_page()) {
-	// 	wp_enqueue_script('top', get_theme_file_uri('/assets/js/parts/top-min.js'), [], $version, true);
-	// }
-	if (is_page('contact')) {
-		// wp_enqueue_script('datepicker', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', [], $version, true);
-		wp_enqueue_script('contact', get_theme_file_uri('/assets/js/parts/contact-min.js'), [], $version, true);
+	if (is_page('contact')) {wp_enqueue_script('contact', get_theme_file_uri('/assets/js/parts/contact-min.js'), [], $version, true);
 	}
 	wp_enqueue_script('jQuery', get_template_directory_uri() . '/assets/vender/jquery-3.7.1.min.js', [], $version, true);
 	wp_enqueue_script('bundle', get_template_directory_uri() . '/assets/js/bundle.js', [], $version, true);
@@ -34,10 +29,7 @@ function my_exam_validation_rule( $Validation, $data, $Data ) {
 	$Validation->set_rule( 'メールアドレス', 'noEmpty', array( 'message' => '必須項目です。' ) );
 	$Validation->set_rule( 'お問い合わせ内容', 'noEmpty', array( 'message' => '必須項目です。' ) );
 	$Validation->set_rule( 'メールアドレス', 'mail', array( 'message' => '形式を確認してください。' ) );
-	// $Validation->set_rule( 'メールアドレス（確認用）', 'noEmpty', array( 'message' => '※メールアドレス（確認用）を入力してください。' ) );
-	// $Validation->set_rule( 'メールアドレス（確認用）', 'eq', array( 'message' => '※メールアドレスが一致しません。' ) );
-
-	return $Validation;
+  return $Validation;
 }
 // キー指定）mwform_validation_mw-wp-form-OOO
 add_filter( 'mwform_validation_mw-wp-form-117', 'my_exam_validation_rule', 10, 3 );

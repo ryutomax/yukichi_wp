@@ -3,13 +3,16 @@
 
   <?php if (is_home() || is_front_page()) :?>
     <?php $title = "諭吉そば"; ?>
-    <?php $description = '諭吉そば 心躍る、うまいラーメンを'; ?>
-  <?php elseif (is_page('contact')) :?>
+    <?php $description = '諭吉そば 心躍る、うまい一杯を'; ?>
+  <?php elseif (is_page('contact') || is_page('complete')) :?>
     <?php $title = "お問い合わせ｜諭吉そば"; ?>
-    <?php $description = '諭吉そば 心躍る、うまいラーメンを'; ?>
+    <?php $description = '諭吉そば 心躍る、うまい一杯を'; ?>
   <?php elseif (is_single() && ('news' == get_post_type())) :?>
     <?php $title = "おしらせ｜諭吉そば"; ?>
-    <?php $description = '諭吉そば 心躍る、うまいラーメンを'; ?>
+    <?php $description = '諭吉そば 心躍る、うまい一杯を'; ?>
+  <?php else:?>
+    <?php $title = "諭吉そば"; ?>
+    <?php $description = '諭吉そば 心躍る、うまい一杯を'; ?>
   <?php endif; ?>
   <head>
     <meta charset="UTF-8" />

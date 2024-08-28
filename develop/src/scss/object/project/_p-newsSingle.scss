@@ -15,4 +15,14 @@
 
 .p-newsSingle-ttl {
   font-size: rem(24);
+  margin-bottom: 24px;
+}
+
+.p-newsSingle-img {
+  margin: 0 auto;
+  margin-bottom: 32px;
+  width: 80%;
+  display: block;
+  min-width: 300px;
+  max-width: 750px;
 }

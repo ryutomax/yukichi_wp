@@ -75,13 +75,10 @@
 .p-input-textarea {
   border: none;
   background-color: #E2E6E9;
-  max-width: 520px;
-  width: 100%;
   padding: 8px;
+  width: 100%;
 
   @include mq (o-sp) {
-    width: 100%;
-    max-width: none;
   }
 }
 

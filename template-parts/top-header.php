@@ -3,7 +3,7 @@
     <div class="p-top-header-top">
       <h1 class="p-top-header-logo c-logo fadein-zoomout-set">
         <a class="p-top-header-logo-link" href="<?= esc_url(home_url('/')) ?>">
-          <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/main_logo_black.png" alt="諭吉そば 心躍る、うまいラーメンを" class="p-top-header-logo-img">
+          <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/main_logo_black.png" alt="諭吉そば 心躍る、うまい一杯を" class="p-top-header-logo-img">
         </a>
       </h1>
     </div>
