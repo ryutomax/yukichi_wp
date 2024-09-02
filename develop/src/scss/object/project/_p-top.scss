@@ -22,10 +22,10 @@
 
 img.p-top-main-img {
   object-fit: cover;
-  height: 70vw;
+  height: 30vw;
 
   @include mq (o-sp) {
-    max-height: 450px;
+    max-height: 300px;
   }
 }
 

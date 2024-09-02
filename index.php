@@ -13,7 +13,7 @@
       <div class="p-top-main" id="introduction">
         <div class="steamWrap fadein-set01">
           <div class="steamBox">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/greeting/greeting_mv.png" alt="心躍る、うまい一杯を" class="p-top-main-img">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/greeting/greeting_mv.jpg" alt="心躍る、うまい一杯を" class="p-top-main-img">
             <div class="steam01 c-steam"><img class="steam01-img" src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/steam01.png" alt="湯気"></div>
             <div class="steam02 c-steam"><img class="steam02-img" src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/steam02.png" alt="湯気"></div>
             <div class="steam03 c-steam"><img class="steam03-img" src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/steam01.png" alt="湯気"></div>
@@ -110,7 +110,7 @@
         <span class="c-title-jp fadein-zoomout-set">おしながき</span>
         <span class="c-title-en fadein-zoomout-set">MENU</span>
       </h3>
-      <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/menu/menu_mv.png" alt="心躍る、うまい一杯を" class="p-menu-img">
+      <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/menu/menu_mv.jpg" alt="心躍る、うまい一杯を" class="p-menu-img">
       <!-- ラーメン -->
       <?php get_template_part('template-menu/menu-ramen'); ?>
       <!-- お蕎麦 -->

@@ -18,7 +18,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -40%);
-    width: 100%;
+    width: 100vw;
     height: 270px;
     z-index: -1;
   }
@@ -26,13 +26,15 @@
 
 .p-menu-img {
   scale: 1.15;
-  height: 36vw;
+  height: 50vw;
   object-fit: cover;
   margin-top: -80px;
+  margin-bottom: 24px;
   max-height: 350px;
 
   @include mq (o-sp) {
     scale: 1;
+    margin-bottom: 0;
   }
 }
 
