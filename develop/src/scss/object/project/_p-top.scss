@@ -23,6 +23,7 @@
 img.p-top-main-img {
   object-fit: cover;
   height: 30vw;
+  margin-bottom: 48px;
 
   @include mq (o-sp) {
     max-height: 300px;
@@ -42,14 +43,15 @@ img.p-top-main-img {
 }
 
 .p-top-main-copy {
-  font-size: rem(48);
+  font-size: rem(56);
   writing-mode: vertical-rl;
   font-family: $ff-hand;
   display: flex;
   align-items: center;
   margin-bottom: 32px;
+  justify-content: center;
   @include mq (o-sp) {
-    font-size: rem(56);
+    font-size: rem(64);
     margin-bottom: 0;
   }
 }
@@ -61,7 +63,7 @@ img.p-top-main-img {
   width: 320px;
   margin: 0 auto;
   font-size: rem(12);
-  line-height: 1.5;
+  line-height: 1.4;
   text-shadow: 1px 1px 12px #a19f9f;
 
   @include mq (o-sp-m) {
@@ -76,8 +78,6 @@ img.p-top-main-img {
 }
 
 .p-top-main-text-jp {
-  margin-bottom: 24px;
-  
 }
 
 .p-top-main-text-en {

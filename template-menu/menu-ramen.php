@@ -3,8 +3,8 @@
 		<span class="c-title-jp">ラーメン</span>
 		<span class="c-title-en">Ramen</span>
 	</h4>
-	<p class="p-menu-text-jp fadein-set01">まろやかな醤油の味わい、チャーシュー丼との相性も抜群です。</p>
-	<p class="p-menu-text-en fadein-set01">The mellow soy sauce taste goes perfectly with the chashu rice bowl.<br>The compatibility is also excellent.</p>
+	<p class="p-menu-text-jp fadein-set01">コシのある太麺にキレのある特製醤油を使ったスープ、しっとりチャーシューと<br>手切りメンマにざっくり切った青ネギのトッピングの特製ラーメンをご賞味ください。</p>
+	<p class="p-menu-text-en fadein-set01">Please enjoy our special ramen noodles with thick, firm noodles, a sharp broth made with special soy sauce, <br>moist chashu pork and hand-cut bamboo shoots, topped with roughly chopped green onions.</p>
 	<ul class="p-menu-list">
 	<?php
 		$args = array(

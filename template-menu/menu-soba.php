@@ -2,8 +2,8 @@
 	<h4 class="p-menu-cont-ttl c-title fadein-zoomout-set">
 		<span class="c-title-jp">おそば</span>
 		<span class="c-title-en">Soba noodles</span></h4>
-	<p class="p-menu-text-jp fadein-set01">太めで弾力のある田舎蕎麦をしっかりした出汁が受け取と止める味わい深い一品。</p>
-	<p class="p-menu-text-en fadein-set01">A flavorful dish that combines thick and chewy country soba noodles with a strong dashi stock.</p>
+	<p class="p-menu-text-jp fadein-set01">噛めば噛むほど、そば本来の甘みや風味が感じられる極太蕎麦。<br>揚げたての天ぷらと一緒に素朴な味わいをお楽しみください。</p>
+	<p class="p-menu-text-en fadein-set01">The more you chew, the more you can feel the original sweetness and flavor of the buckwheat. <br>Enjoy the simple taste with freshly fried tempura.</p>
 	<ul class="p-menu-list">
 	<?php
 		$args = array(

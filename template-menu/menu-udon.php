@@ -2,8 +2,8 @@
 	<h4 class="p-menu-cont-ttl c-title fadein-zoomout-set">
 		<span class="c-title-jp">おうどん</span>
 		<span class="c-title-en">Udon</span></h4>
-	<p class="p-menu-text-jp fadein-set01">太めで弾力のある田舎蕎麦をしっかりした出汁が受け取と止める味わい深い一品。</p>
-	<p class="p-menu-text-en fadein-set01">A flavorful dish that combines thick and chewy country soba noodles with a strong dashi stock.</p>
+	<p class="p-menu-text-jp fadein-set01">もっちりした弾力のある食感とコシが特徴の太麺うどん。<br>温冷どちらも揚げたての天ぷらと一緒にお楽しみください。</p>
+	<p class="p-menu-text-en fadein-set01">Thick udon noodles with a firm and elastic texture.<br>Enjoy it hot or cold with freshly fried tempura.</p>
 	<ul class="p-menu-list">
 	<?php
 		$args = array(

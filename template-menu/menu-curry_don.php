@@ -3,8 +3,8 @@
 		<span class="c-title-jp">ご飯もの</span>
 		<span class="c-title-en">Rice</span>
 	</h4>
-	<p class="p-menu-text-jp fadein-set01">まろやかな醤油の味わい、チャーシュー丼との相性も抜群です。</p>
-	<p class="p-menu-text-en fadein-set01">The mellow soy sauce taste goes perfectly with the chashu rice bowl.<br>The compatibility is also excellent.</p>
+	<p class="p-menu-text-jp fadein-set01">お米は千葉県産のコシヒカリ。手作りのカレーライスやおにぎり各種をご賞味ください。</p>
+	<p class="p-menu-text-en fadein-set01">Rice is Koshihikari produced in Chiba Prefecture.<br>Please enjoy our handmade curry rice and a variety of onigiri rice balls.</p>
 	<ul class="p-menu-list">
 	<?php
 		$args = array(
