@@ -6,13 +6,13 @@
           </a>
         </h1>
         <ol class="p-footer-icons">
-          <a href="https://www.facebook.com/lapin20150209/" class="p-footer-icon" terget="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/yukichisoba/" class="p-footer-icon" terget="_blank" rel="noopener noreferrer">
             <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/icons/Facebook_icon.png" alt="Facebook 諭吉そば 心躍る、うまい一杯を" class="p-footer-icon-img">
           </a>
-          <a href="https://www.instagram.com/?hl=ja" class="p-footer-icon" terget="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/yukichi_soba/?hl=ja" class="p-footer-icon" terget="_blank" rel="noopener noreferrer">
             <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/icons/Instagram_icon.png" alt="Instagram 諭吉そば 心躍る、うまい一杯を" class="p-footer-icon-img">
           </a>
-          <a href="https://twitter.com/sobacchan_m" class="p-footer-icon" terget="_blank" rel="noopener noreferrer">
+          <a href="https://twitter.com/Yukichisoba" class="p-footer-icon" terget="_blank" rel="noopener noreferrer">
             <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/icons/X_icon.png" alt="X 諭吉そば 心躍る、うまい一杯を" class="p-footer-icon-img">
           </a>
           <a href="<?= esc_url(home_url('/')) ?>contact" class="p-footer-icon">
