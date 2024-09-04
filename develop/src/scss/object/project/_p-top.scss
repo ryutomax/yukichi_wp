@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-top {
-  background-image: url(../images/main_top_bg.jpg);
+  background-image: url(../images/main_top_bg_red.jpg);
   background-size: cover;
 }
 
@@ -22,12 +22,7 @@
 
 img.p-top-main-img {
   object-fit: cover;
-  height: 30vw;
-  margin-bottom: 48px;
-
-  @include mq (o-sp) {
-    max-height: 300px;
-  }
+  height: 100%;
 }
 
 .p-top-main-cont {
@@ -36,6 +31,7 @@ img.p-top-main-img {
   flex-wrap: nowrap;
   justify-content: center;
   padding: 20px 0;
+  color: white;
 
   @include mq (o-sp) {
     flex-direction: row-reverse;
@@ -60,14 +56,14 @@ img.p-top-main-img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 320px;
+  width: 370px;
   margin: 0 auto;
-  font-size: rem(12);
+  font-size: rem(14);
   line-height: 1.4;
   text-shadow: 1px 1px 12px #a19f9f;
 
   @include mq (o-sp-m) {
-    width: 420px;
+    width: 460px;
     font-size: rem(16);
   }
 
