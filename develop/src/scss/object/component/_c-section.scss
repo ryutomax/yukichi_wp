@@ -2,6 +2,7 @@
 
 .c-section {
   padding: 28px 16px;
+  overflow-x: hidden;
   @include mq (o-sp) {
     padding: 64px 16px;
   }

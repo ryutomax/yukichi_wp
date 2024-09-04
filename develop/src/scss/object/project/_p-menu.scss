@@ -8,10 +8,11 @@
   position: relative;
   margin: 0 -16px;
   padding: 20px 0 120px 0;
+  color: white;
 
   &::after {
     content: "";
-    background-image: url(../images/main_top_bg.jpg);
+    background-image: url(../images/main_top_bg_red.jpg);
     background-size: cover;
     background-position-y: 270px;
     position: absolute;
