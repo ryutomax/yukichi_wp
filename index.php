@@ -25,13 +25,21 @@
           <h2 class="p-top-main-copy fadein-zoomout-set">心躍る、<br>うまい<br>ラーメンを</h2>
           <div class="p-top-main-text">
             <p class="p-top-main-text-jp fadein-set02">
-              新しいのにどこか懐かしさを感じる味わいの<br>
-              昔ながらの屋台味から、新しい味を取り入れたものまで<br>
-              ラーメン、そば、うどん、カレーを手づくりしています。<br>
-              それぞれの個性ある味わいをお楽しみください。
-            </p>
-            <p class="p-top-main-text-en fadein-set03">
-              It has a taste that feels nostalgic even though it is new.<br>From traditional street food flavors to new flavors <br>We make ramen, soba, udon, and curry by hand. <br>Please enjoy the unique taste of each.
+              東京蒲田の老舗蕎麦店で長年修行を重ねた後、<br>
+              ここ松戸の地でおよそ10年にわたり蕎麦店を営んできた、<br>
+              74歳松戸名物おばちゃん店主の店が<br>
+              心機一転『諭吉そば』として生まれ変わりました。<br><br>
+              74歳にしてとにかく元気な店主が<br>
+              「まかない」をベースに考案した<br>
+              特製醤油ラーメンをメインに、<br>
+              極太蕎麦やうどん、揚げたての天ぷらや<br>
+              蕎麦店時代から人気の手作り唐揚げなど、<br>
+              毎日店主自ら仕込んでいます。<br>
+              美味しくてお腹も満足していただけるボリューム感と<br>
+              アットホームな雰囲気、店主の心意気は<br>
+              蕎麦店時代から変わらず引き継がれたもの。<br>
+              カウンター８席の小さなお店ではありますが、<br>
+              皆様のお越しをお待ちしております。<br>
             </p>
           </div>
         </div>

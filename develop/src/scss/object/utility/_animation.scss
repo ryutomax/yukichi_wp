@@ -1,3 +1,5 @@
+@use "global" as *;
+
 @mixin generate-fadein-class($count) {
   @for $i from 1 through $count {
     @if $i < 10 {
@@ -98,19 +100,27 @@
   }
 }
 .steamWrap {
-  margin: 100px auto 0
+  margin: 100px -16px 0px -16px;
+  @include mq (o-sp) {
+    margin: 100px auto 0;
+    margin-bottom: 48px;
+  }
 }
 .steamBox {
   width: 100%;
-  height: 100%;
+  height: 30vw;
   position: relative;
   overflow: hidden;
   border-radius: 4px;
+
+  @include mq (o-sp) {
+    max-height: 300px;
+  }
 }
 .c-steam {
   position: absolute;
   opacity: 0;
-  animation-iteration-count:3; 
+  animation-iteration-count:3;
 }
 .steam01 {
   right: 0;
