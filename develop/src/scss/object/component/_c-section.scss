@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .c-section {
-  padding: 28px 16px;
+  padding: 28px 12px;
   overflow-x: hidden;
   @include mq (o-sp) {
     padding: 64px 16px;
