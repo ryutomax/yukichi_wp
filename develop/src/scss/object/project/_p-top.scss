@@ -31,7 +31,6 @@ img.p-top-main-img {
   flex-wrap: nowrap;
   justify-content: center;
   padding: 20px 0;
-  color: white;
 
   @include mq (o-sp) {
     flex-direction: row-reverse;
@@ -43,9 +42,19 @@ img.p-top-main-img {
   writing-mode: vertical-rl;
   font-family: $ff-hand;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 32px;
   justify-content: center;
+  flex-direction: column;
+  padding-top: 80px;
+  em {
+    background-image: linear-gradient(to left, transparent 50%, #ffffff 50%);
+    background-position: 17px 0;
+    background-repeat: repeat-y;
+    background-size: 2em 200%;
+    display: inline-block;
+  }
+
   @include mq (o-sp) {
     font-size: rem(64);
     margin-bottom: 0;
@@ -56,14 +65,13 @@ img.p-top-main-img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 370px;
+  width: 100%;
   margin: 0 auto;
-  font-size: rem(14);
-  line-height: 1.4;
-  text-shadow: 1px 1px 12px #a19f9f;
+  font-size: min(3.3vw, rem(14));
+  line-height: 1.6;
 
   @include mq (o-sp-m) {
-    width: 460px;
+    width: 420px;
     font-size: rem(16);
   }
 
@@ -74,6 +82,18 @@ img.p-top-main-img {
 }
 
 .p-top-main-text-jp {
+  em {
+    font-weight: 700;
+    background-image: linear-gradient(left, transparent 50%, #ffffff 50%);
+    background-position: -100% 3px;
+    background-repeat: repeat-x;
+    background-size: 200% 1em;
+
+    @include mq (o-sp) {
+      background-position: -100% 5px;
+      background-size: 200% 1em;
+    }
+  }
 }
 
 .p-top-main-text-en {
