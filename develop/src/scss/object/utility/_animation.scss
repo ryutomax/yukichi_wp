@@ -110,9 +110,14 @@
 }
 .steamWrap {
   margin: 100px -16px 0px -16px;
+  max-height: 350px;
+  max-width: 1400px;
+  
   @include mq (o-sp) {
-    margin: 100px auto 0;
     margin-bottom: 48px;
+  }
+  @include mq (o-bigPc) {
+    margin: 100px auto 48px auto;
   }
 }
 .steamBox {
@@ -123,7 +128,8 @@
   border-radius: 4px;
 
   @include mq (o-sp) {
-    max-height: 300px;
+    max-height: 350px;
+    max-width: 1400px;
   }
 }
 .c-steam {

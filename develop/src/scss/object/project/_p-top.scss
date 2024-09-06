@@ -49,10 +49,11 @@ img.p-top-main-img {
   padding-top: 80px;
   em {
     background-image: linear-gradient(to left, transparent 50%, #ffffff 50%);
-    background-position: 17px 0;
+    background-position: 10px 0;
     background-repeat: repeat-y;
     background-size: 2em 200%;
     display: inline-block;
+    font-style: normal;
   }
 
   @include mq (o-sp) {
@@ -88,6 +89,7 @@ img.p-top-main-img {
     background-position: -100% 3px;
     background-repeat: repeat-x;
     background-size: 200% 1em;
+    font-style: normal;
 
     @include mq (o-sp) {
       background-position: -100% 5px;
