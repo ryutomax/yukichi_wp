@@ -7,15 +7,21 @@
 .p-news-ttl {}
 
 .p-news-img {
+  display: block;
+  margin: 0 -16px;
   margin-bottom: 64px;
   border-radius: 4px;
   object-fit: cover;
   height: 50vw;
-  scale: 1.15;
+  width: 100vw;
+  max-width: 1400px;
 
   @include mq (o-sp) {
-    max-height: 320px;
-    scale: 1;
+    max-height: 450px;
+  }
+
+  @include mq (o-bigPc) {
+    margin: 100px auto 48px auto;
   }
 }
 

@@ -24,9 +24,9 @@
 	?>
 		<li class="p-menu-item fadein-set01">
 			<?php if( get_field('メニュー画像') ): ?>
-				<img class="p-menu-item-img" src="<?php the_field('メニュー画像'); ?>" alt="<?php the_field('メニュー名'); ?>">
+				<img class="p-menu-item-img" src="<?php the_field('メニュー画像'); ?>" alt="<?php the_field('メニュー名'); ?>" loading=”lazy”>
 			<?php else: ?>
-				<img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/menu/menu_ready.png" alt="<?php the_field('メニュー名'); ?>" class="p-menu-item-img">
+				<img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/menu/menu_ready.png" alt="<?php the_field('メニュー名'); ?>" class="p-menu-item-img" loading=”lazy”>
 			<?php endif; ?>	
 			<h4 class="p-menu-name">
 				<span class="sub"><?php the_field('メニューリード文'); ?></span>
