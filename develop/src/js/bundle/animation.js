@@ -1,7 +1,7 @@
 export default class Animation {
   constructor() {
     // ========================================
-    // コンテンツ　スクロールアニメーション 
+    // コンテンツ　スクロールアニメーション
     // ========================================
     for(let i = 0; i <= 10; i++) {
       if (i < 10) {
@@ -10,14 +10,14 @@ export default class Animation {
         fadeInAnimation(`.fadein-set${i}`, 'fadein-anime');
       }
     }
-    
+
     fadeInAnimation('.fadein-zoomout-set', 'fadein-zoomout-anime');
-    
+
     function fadeInAnimation(fadeinSet, addElement) {
       document.addEventListener('DOMContentLoaded', () => {
         // DOM取得
         const targets = document.querySelectorAll(fadeinSet);
-    
+
         // コールバック関数
         const callback = (entries, observer) => {
           entries.forEach(entry => {
@@ -29,24 +29,24 @@ export default class Animation {
             }
           });
         };
-    
+
         // オプション
         const options = {
           root: null,
           rootMargin: "0px 0px -100px 0px",//発火位置調整
           threshold: [0] //発火位置調整(交差)
         };
-    
+
         // 初期化
         const observer = new IntersectionObserver(callback, options);
-    
+
         // 監視を開始
         targets.forEach(target => {
           observer.observe(target);
-    
+
           // ページロード時、すでに画面内または画面外にある要素に対してもクラスを追加
           const rectTarget = target.getBoundingClientRect();
-    
+
           if ( rectTarget.top < 0) { //view-portより上
             target.classList.add(addElement);
             observer.unobserve(target);
@@ -91,7 +91,7 @@ export default class Animation {
       const elements = document.querySelectorAll(".p-header-nav-item.fadein-set04, .p-header-nav-item.fadein-set05, .p-header-nav-item.fadein-set06, .p-header-nav-item.fadein-set07");
 
       elements.forEach(element => {
-        
+
         element.classList.toggle("fadein-anime");
       });
     });
@@ -100,14 +100,21 @@ export default class Animation {
     links.forEach(link => {
       link.addEventListener("click", () => {
         menuBtn.classList.remove("is-bar-move");
-  
+
         const menu = document.querySelector(".js-menu-show");
         menu.classList.remove("is-menu-show");
-  
+
         const bg = document.querySelector(".js-load");
         bg.classList.remove("is-stay");
+
+        const elements = document.querySelectorAll(".p-header-nav-item.fadein-set04, .p-header-nav-item.fadein-set05, .p-header-nav-item.fadein-set06, .p-header-nav-item.fadein-set07");
+
+        elements.forEach(element => {
+
+          element.classList.toggle("fadein-anime");
+        });
       });
     });
-    
+
   }
 }
