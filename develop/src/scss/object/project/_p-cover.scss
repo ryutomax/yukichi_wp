@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.p-cover {
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+  height: 842px;
+  position: relative;
+  padding: 32px 16px;
+}
+
+.p-cover-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-cover-logo-link {
+  display: block;
+  min-width: 200px;
+  max-width: 340px;
+}
+
+.p-cover-menuBtn {
+  margin-left: auto;
+}
+
+.p-fixBox {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+}
+
+.is-scrolled {
+  position: relative;
+  margin-top: 50px;
+}
+
+.is-marginTop_100vh {
+  margin-top: 100vh;
+}

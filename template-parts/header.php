@@ -6,10 +6,10 @@
           <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/main_logo_black.png" alt="諭吉そば 心躍る、うまい一杯を" class="p-header-logo-img">
         </a>
       </h1>
-      <button class="p-header-menuBtn js-menu-btn u-zindex_1000" aria-label="Menuを開く">
-        <span class="p-header-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
-        <span class="p-header-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
-        <span class="p-header-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
+      <button class="c-menuBtn js-menu-btn u-zindex_1000" aria-label="Menuを開く">
+        <span class="c-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
+        <span class="c-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
+        <span class="c-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
       </button>
     </div>
     <!-- /.p-header-top -->

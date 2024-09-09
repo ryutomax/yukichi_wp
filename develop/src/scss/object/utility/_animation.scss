@@ -109,15 +109,20 @@
   }
 }
 .steamWrap {
-  margin: 100px -16px 0px -16px;
-  max-height: 350px;
+  margin: 0 -16px;
+  margin-top: 10vh;
+  height: 30vh;
   max-width: 1400px;
-  
+  display: flex;
+  align-items: center;
+
   @include mq (o-sp) {
-    margin-bottom: 48px;
+    margin-top: 0;
+    height: 90vh;
   }
+  
   @include mq (o-bigPc) {
-    margin: 100px auto 48px auto;
+    margin: 0 auto;
   }
 }
 .steamBox {
@@ -128,43 +133,51 @@
   border-radius: 4px;
 
   @include mq (o-sp) {
-    max-height: 350px;
+    max-height: 450px;
     max-width: 1400px;
   }
 }
 .c-steam {
   position: absolute;
   opacity: 0;
-  animation-iteration-count:3; 
+  animation-iteration-count:3;
+  animation-timing-function: linear;
 }
 .steam01 {
   right: 0;
-  animation: steam01 10s linear;
+  animation-duration: 10s;
 }
 .steam02 {
   left: 0;
-  animation: steam02 4s linear;
+  animation-duration: 4s;
 }
 .steam03 {
   margin: auto;
   right: 0;
   left: 0;
-  animation: steam02 7s linear;
+  animation-duration: 7s;
   animation-delay: 6s;
 }
 .steam04 {
   margin: auto;
   right: 0;
   left: 0;
-  animation: steam02 8s linear;
+  animation-duration: 8s;
   animation-delay: 2s;
 }
 .steam05 {
   margin: auto;
   right: 50%;
   left: 0;
-  animation: steam02 6s linear;
+  animation-duration: 6s;
   animation-delay: 4s;
+}
+
+.is-steam01 {
+  animation-name: steam01;
+}
+.is-steam02 {
+  animation-name: steam02;
 }
 
 .steam01-img,
@@ -177,30 +190,4 @@
 .steam05-img {
   width: 399px;
   height: 600px
-}
-
-@mixin bgLRextend($duration: 2s, $b: 10%, $h: 25%, $z: -1) {
-  animation-name: underL;
-  animation-duration: $duration;
-  animation-fill-mode: forwards;
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: $b;
-  z-index: $z;
-  width: 100%;
-  height: $h;
-  background-color: #19B8FF;
-}
-
-@keyframes underL {
-  0% {
-    transform-origin: left;
-    transform: scaleX(0);
-  }
-
-  100% {
-    transform-origin: left;
-    transform: scaleX(1);
-  }
 }
