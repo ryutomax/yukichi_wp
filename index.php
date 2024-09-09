@@ -16,11 +16,11 @@
       <span class="c-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
       <span class="c-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
     </button>
+    <div class="c-scrolldown">
+      <div class="c-line"></div>
+    </div>
   </section>
   <section class="p-top c-section p-fixBox" id="fixBox">
-    <div class="u-sp-show">
-      <?php get_template_part('template-parts/banner'); ?>
-    </div>
     <div class="steamWrap fadein-set01">
       <div class="steamBox">
         <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/greeting/greeting_mv.jpg" alt="心躍る、うまい一杯を" class="p-top-main-img">
@@ -31,9 +31,12 @@
         <div class="steam05 c-steam"><img class="steam05-img" src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/steam01.png" alt="湯気"></div>
       </div>
     </div>
-    <div class="p-top-inner c-section-inner">
+    <div class="u-sp-show">
+      <?php get_template_part('template-parts/banner'); ?>
+    </div>
+    <div class="p-top-inner c-section-inner" id="introduction">
       <div class="p-top-main">
-        <div class="p-top-main-cont" id="introduction">
+        <div class="p-top-main-cont">
           <h2 class="p-top-main-copy fadein-zoomout-set"><em>心躍る、</em><em>うまい</em><em>一杯を</em></h2>
           <div class="p-top-main-text">
             <p class="p-top-main-text-jp fadein-set02">

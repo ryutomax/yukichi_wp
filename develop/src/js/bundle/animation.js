@@ -76,6 +76,7 @@ export default class Animation {
 
         const elements = document.querySelectorAll(".p-header-nav-item.fadein-set04, .p-header-nav-item.fadein-set05, .p-header-nav-item.fadein-set06, .p-header-nav-item.fadein-set07");
 
+        const fixBox = document.getElementById('fixBox');
         elements.forEach(element => {
           
           element.classList.toggle("fadein-anime");
@@ -99,7 +100,7 @@ export default class Animation {
 
         const elements = document.querySelectorAll(".p-header-nav-item.fadein-set04, .p-header-nav-item.fadein-set05, .p-header-nav-item.fadein-set06, .p-header-nav-item.fadein-set07");
         elements.forEach(element => {
-          
+          fixBox.classList.add('is-scrolled');
           element.classList.toggle("fadein-anime");
         });
       });
@@ -122,7 +123,7 @@ export default class Animation {
       const steam04 = document.querySelector(".steam04");
       const steam05 = document.querySelector(".steam05");
 
-      if (pCover.getBoundingClientRect().bottom + 20 <= 0) {
+      if (pCover.getBoundingClientRect().bottom + 50 <= 0) {
         header.classList.add('is-scroll');
         fixBox.classList.add('is-scrolled');
         news.classList.remove('is-marginTop_100vh');

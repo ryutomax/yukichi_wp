@@ -74,8 +74,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(calc(-100% + 16px), -32px);
-  padding-top: 120px;
+  transform: translate(calc(-100% + 16px), 30px);
   // @include mq (o-sp) {
   //   position: relative;
   //   flex-direction: row;
