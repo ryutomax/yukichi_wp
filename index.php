@@ -8,7 +8,7 @@
   <section class="p-cover">
     <h1 class="p-cover-logo c-logo fadein-zoomout-set">
       <a class="p-cover-logo-link" href="<?= esc_url(home_url('/')) ?>">
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/main_logo_black.png" alt="諭吉そば 心躍る、うまい一杯を" class="p-top-header-logo-img">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/main_logo_white.png" alt="諭吉そば 心躍る、うまい一杯を" class="p-top-header-logo-img">
       </a>
     </h1>
     <button class="p-cover-menuBtn c-menuBtn js-menu-btn-c u-zindex_1000" aria-label="Menuを開く">

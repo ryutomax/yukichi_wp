@@ -56,10 +56,6 @@
 .p-header-btm {
   display: none;
   position: relative;
-  // @include mq (o-sp) {
-  //   display: flex;
-  //   justify-content: center;
-  // }
 }
 
 .p-header-nav {
@@ -69,22 +65,16 @@
   align-items: center;
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 105vh;
   background-color: #fffffff9;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(calc(-100% + 16px), 30px);
-  // @include mq (o-sp) {
-  //   position: relative;
-  //   flex-direction: row;
-  //   width: 450px;
-  //   height: auto;
-  //   top: 0;
-  //   left: 0;
-  //   transform: none;
-  //   padding-top: 0px;
-  // }
+  transform: translate(calc(-100% + 16px), -30px);
+
+  @include mq (o-sp) {
+    transform: translate(calc(-100% + 16px), 30px);
+  }
 }
 
 .p-header-nav-item {
