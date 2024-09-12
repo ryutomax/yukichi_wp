@@ -3,12 +3,24 @@
 	get_template_part('template-parts/header');
   require_once(locate_template('template-parts/module_func.php', true, true));
 ?>
+
 <main class="l-main">
-  <section class="p-top c-section">
-    <?php get_template_part('template-parts/top-header'); ?>
-    <div class="u-sp-show">
-      <?php get_template_part('template-parts/banner'); ?>
+  <section class="p-cover">
+    <h1 class="p-cover-logo c-logo fadein-zoomout-set">
+      <a class="p-cover-logo-link" href="<?= esc_url(home_url('/')) ?>">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/main_logo_white.png" alt="諭吉そば 心躍る、うまい一杯を" class="p-top-header-logo-img">
+      </a>
+    </h1>
+    <button class="p-cover-menuBtn c-menuBtn js-menu-btn-c u-zindex_1000" aria-label="Menuを開く">
+      <span class="c-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
+      <span class="c-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
+      <span class="c-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
+    </button>
+    <div class="c-scrolldown">
+      <div class="c-line"></div>
     </div>
+  </section>
+  <section class="p-top c-section p-fixBox" id="fixBox">
     <div class="steamWrap fadein-set01">
       <div class="steamBox">
         <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/greeting/greeting_mv.jpg" alt="心躍る、うまい一杯を" class="p-top-main-img">
@@ -19,8 +31,11 @@
         <div class="steam05 c-steam"><img class="steam05-img" src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/steam01.png" alt="湯気"></div>
       </div>
     </div>
-    <div class="p-top-inner c-section-inner">
-      <div class="p-top-main" id="introduction">
+    <div class="u-sp-show">
+      <?php get_template_part('template-parts/banner'); ?>
+    </div>
+    <div class="p-top-inner c-section-inner" id="introduction">
+      <div class="p-top-main">
         <div class="p-top-main-cont">
           <h2 class="p-top-main-copy fadein-zoomout-set"><em>心躍る、</em><em>うまい</em><em>一杯を</em></h2>
           <div class="p-top-main-text">
@@ -48,7 +63,7 @@
     </div>
     <!-- /.p-top-inner -->
   </section>
-  <section class="p-news c-section" id="news">
+  <section class="p-news c-section is-marginTop_100vh" id="news">
     <h3 class="p-news-ttl c-title fadein-zoomout-set">
       <span class="c-title-jp">おしらせ</span>
       <span class="c-title-en">NEWS</span>
@@ -57,19 +72,19 @@
     <div class="p-news-inner c-section-inner">
       <div class="p-news-list">
         <?php
-					$args = array(
-						'post_type' => 'news',
-						'post_status' => 'publish',
+          $args = array(
+            'post_type' => 'news',
+            'post_status' => 'publish',
             'posts_per_page' => 10,
-					);
+          );
           $news_count = 1;
           // 表示される記事数取得
-					$wp_query = new WP_Query( $args );
+          $wp_query = new WP_Query( $args );
           $news_num = $wp_query->found_posts;
-					if ( $wp_query->have_posts() ):
-					while ( $wp_query->have_posts() ):
-						$wp_query->the_post();
-				?>
+          if ( $wp_query->have_posts() ):
+          while ( $wp_query->have_posts() ):
+            $wp_query->the_post();
+        ?>
           <?php if($news_count <= 5): ?>
             <article class="p-news-itme fadein-set01">
               <a href="<?php the_permalink(); ?>" class="p-news-link">

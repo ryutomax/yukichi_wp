@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-contact {
-  background-image: url(../images/main_top_bg_red.jpg);
+  background-image: url("../images/main_top_bg_red.jpg");
   background-size: cover;
   position: relative;
 
@@ -38,7 +38,7 @@
   margin-bottom: 24px;
 
   @include mq (o-sp) {
-    
+
   }
 }
 

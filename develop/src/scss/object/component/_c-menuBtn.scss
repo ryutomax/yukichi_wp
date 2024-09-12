@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.c-menuBtn {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 22px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.c-menuBtn-bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #d1a856;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &:first-child {
+    top: 0%;
+  }
+
+  &:nth-child(2) {
+  }
+
+  &:nth-child(3) {
+    top: 100%;
+  }
+}

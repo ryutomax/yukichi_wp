@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-top {
-  background-image: url(../images/main_top_bg_red.jpg);
+  background-image: url("../images/main_top_bg_red.jpg");
   background-size: cover;
 }
 
@@ -13,7 +13,7 @@
   max-width: 500px;
 
   @include mq (o-sp) {
-    margin: 64px auto 0px auto;
+    margin: 64px auto 64px auto;
   }
   img {}
 }
