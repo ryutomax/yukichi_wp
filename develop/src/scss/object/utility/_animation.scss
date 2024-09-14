@@ -57,7 +57,7 @@
 
 @keyframes steam01 {
   0% {
-    bottom: -600px;
+    bottom: 100px;
     filter: blur(16px);
     transform: rotateY(0deg);
     transform: scale(0.6, 1);
@@ -75,7 +75,7 @@
     opacity: 0.4
   }
   100% {
-    bottom: 0;
+    bottom: 350px;
     filter: blur(20px);
     transform: rotateY(60deg);
     transform: scaleY(2, 1.8);
@@ -84,7 +84,7 @@
 }
 @keyframes steam02 {
   0% {
-    bottom: -400px;
+    bottom: 100px;
     filter: blur(16px);
     transform: rotateY(0deg);
     transform: scale(0.6, 0.6);
@@ -101,7 +101,7 @@
     transform: scaleY(1, 1.2)
   }
   100% {
-    bottom: 0;
+    bottom: 350px;
     filter: blur(20px);
     transform: rotateY(50deg);
     transform: scaleY(1.2, 1.4);
@@ -128,7 +128,7 @@
 }
 .steamBox {
   width: 100%;
-  height: 30vw;
+  height: 100%;
   position: relative;
   overflow: hidden;
 
@@ -146,27 +146,26 @@
   opacity: 0;
   animation-iteration-count:3;
   animation-timing-function: linear;
+  bottom: 200px;
 }
 .steam01 {
   right: 0;
-  animation-duration: 10s;
+  animation-duration: 7s;
 }
 .steam02 {
   left: 0;
-  animation-duration: 4s;
+  animation-duration: 6s;
 }
 .steam03 {
   margin: auto;
   right: 0;
   left: 0;
-  animation-duration: 7s;
+  animation-duration: 6s;
   animation-delay: 6s;
 }
 .steam04 {
-  margin: auto;
   right: 0;
-  left: 0;
-  animation-duration: 8s;
+  animation-duration: 6s;
   animation-delay: 2s;
 }
 .steam05 {

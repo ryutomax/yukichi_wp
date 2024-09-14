@@ -80,11 +80,6 @@ export default class Animation {
           element.classList.toggle("fadein-anime");
         });
       });
-
-      const fixBox = document.getElementById('fixBox');
-      elements.forEach(element => {
-        element.classList.toggle("fadein-anime");
-      });
     }
 
     const links = document.querySelectorAll(".p-header-nav-link");
@@ -135,13 +130,13 @@ export default class Animation {
         steam01.classList.add('is-steam01');
         steam02.classList.add('is-steam02');
         steam03.classList.add('is-steam02');
-        steam04.classList.add('is-steam02');
+        steam04.classList.add('is-steam01');
         steam05.classList.add('is-steam02');
       } else {
         steam01.classList.remove('is-steam01');
         steam02.classList.remove('is-steam02');
         steam03.classList.remove('is-steam02');
-        steam04.classList.remove('is-steam02');
+        steam04.classList.remove('is-steam01');
         steam05.classList.remove('is-steam02');
       }
 
