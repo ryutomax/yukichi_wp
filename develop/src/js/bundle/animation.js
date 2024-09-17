@@ -59,10 +59,10 @@ export default class Animation {
     // ヘッダー　グローバルメニュー
     // ========================================
     const menuBtn = document.querySelector(".js-menu-btn");
-    const menuBtnC = document.querySelector(".js-menu-btn-c");
+    // const menuBtnC = document.querySelector(".js-menu-btn-c");
 
     menuBtnAnimation(menuBtn);
-    menuBtnAnimation(menuBtnC);
+    // menuBtnAnimation(menuBtnC);
 
     function menuBtnAnimation(menuBtn) {
       menuBtn.addEventListener("click", () => {
@@ -87,7 +87,7 @@ export default class Animation {
       link.addEventListener("click", () => {
         menuBtn.classList.remove("is-bar-move");
 
-        menuBtnC.classList.remove("is-bar-move");
+        // menuBtnC.classList.remove("is-bar-move");
 
         const menu = document.querySelector(".js-menu-show");
         menu.classList.remove("is-menu-show");
@@ -97,7 +97,7 @@ export default class Animation {
 
         const elements = document.querySelectorAll(".p-header-nav-item.fadein-set04, .p-header-nav-item.fadein-set05, .p-header-nav-item.fadein-set06, .p-header-nav-item.fadein-set07");
         elements.forEach(element => {
-          fixBox.classList.add('is-scrolled');
+          // fixBox.classList.add('is-scrolled');
           element.classList.toggle("fadein-anime");
         });
       });
@@ -106,44 +106,45 @@ export default class Animation {
     // ========================================
     // TOP　スクロール
     // ========================================
-    function handleScroll() {
-      const pCover = document.querySelector('.p-cover');
-      const fixBox = document.getElementById('fixBox');
-      const news = document.getElementById('news');
-      const header = document.querySelector(".js-header");
-      const steam01 = document.querySelector(".steam01");
-      const steam02 = document.querySelector(".steam02");
-      const steam03 = document.querySelector(".steam03");
-      const steam04 = document.querySelector(".steam04");
-      const steam05 = document.querySelector(".steam05");
+  //   function handleScroll() {
+  //     const pCover = document.querySelector('.p-cover');
+  //     const fixBox = document.getElementById('fixBox');
+  //     const news = document.getElementById('news');
+  //     const header = document.querySelector(".js-header");
+  //     const steam01 = document.querySelector(".steam01");
+  //     const steam02 = document.querySelector(".steam02");
+  //     const steam03 = document.querySelector(".steam03");
+  //     const steam04 = document.querySelector(".steam04");
+  //     const steam05 = document.querySelector(".steam05");
 
-      if (pCover.getBoundingClientRect().bottom + 50 <= 0) {
-        header.classList.add('is-scroll');
-        fixBox.classList.add('is-scrolled');
-        news.classList.remove('is-marginTop_100vh');
-      } else {
-        header.classList.remove('is-scroll');
-        fixBox.classList.remove('is-scrolled');
-        news.classList.add('is-marginTop_100vh');
-      }
-      if (pCover.getBoundingClientRect().bottom - 100 <= window.innerHeight / 2) {
-        steam01.classList.add('is-steam01');
-        steam02.classList.add('is-steam02');
-        steam03.classList.add('is-steam02');
-        steam04.classList.add('is-steam01');
-        steam05.classList.add('is-steam02');
-      } else {
-        steam01.classList.remove('is-steam01');
-        steam02.classList.remove('is-steam02');
-        steam03.classList.remove('is-steam02');
-        steam04.classList.remove('is-steam01');
-        steam05.classList.remove('is-steam02');
-      }
+  //     if (pCover.getBoundingClientRect().bottom + 50 <= 0) {
+  //       header.classList.add('is-scroll');
+  //       fixBox.classList.add('is-scrolled');
+  //       news.classList.remove('is-marginTop_100vh');
+  //     } else {
+  //       header.classList.remove('is-scroll');
+  //       fixBox.classList.remove('is-scrolled');
+  //       news.classList.add('is-marginTop_100vh');
+  //     }
+  //     if (pCover.getBoundingClientRect().bottom - 100 <= window.innerHeight / 2) {
+  //       steam01.classList.add('is-steam01');
+  //       steam02.classList.add('is-steam02');
+  //       steam03.classList.add('is-steam02');
+  //       steam04.classList.add('is-steam01');
+  //       steam05.classList.add('is-steam02');
+  //     } else {
+  //       steam01.classList.remove('is-steam01');
+  //       steam02.classList.remove('is-steam02');
+  //       steam03.classList.remove('is-steam02');
+  //       steam04.classList.remove('is-steam01');
+  //       steam05.classList.remove('is-steam02');
+  //     }
 
 
-    }
+  //   }
 
-    document.addEventListener("scroll", handleScroll);
-    window.addEventListener("DOMContentLoaded", handleScroll);
+  //   document.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("DOMContentLoaded", handleScroll);
+  // 
   }
 }

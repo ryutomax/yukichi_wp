@@ -6,6 +6,10 @@
   width: 50px;
   height: 22px;
   background-color: rgba(255, 255, 255, 0);
+
+  @include mq (o-sp) {
+    display: none;
+  }
 }
 
 .c-menuBtn-bar {

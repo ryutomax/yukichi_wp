@@ -5,7 +5,7 @@
 ?>
 
 <main class="l-main">
-  <section class="p-cover">
+  <!-- <section class="p-cover">
     <h1 class="p-cover-logo c-logo fadein-zoomout-set">
       <a class="p-cover-logo-link" href="<?= esc_url(home_url('/')) ?>">
         <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/main_logo_white.png" alt="諭吉そば 心躍る、うまい一杯を" class="p-top-header-logo-img">
@@ -19,7 +19,7 @@
     <div class="c-scrolldown">
       <div class="c-line"></div>
     </div>
-  </section>
+  </section> -->
   <section class="p-top c-section p-fixBox" id="fixBox">
     <div class="steamWrap fadein-set01">
       <div class="steamBox">

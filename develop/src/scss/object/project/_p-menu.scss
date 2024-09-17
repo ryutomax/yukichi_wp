@@ -66,7 +66,8 @@
 
 .p-menu-text-jp {
   text-align: center;
-  margin-bottom: 16px;
+  // margin-bottom: 16px;
+  margin-bottom: 80px;
   line-height: 1.5;
   font-size: rem(14);
 
@@ -85,7 +86,8 @@
 
 
 $mb: 80px;
-$mr: 20px;
+$mr: 48px;
+$mr-sp: 24px;
 
 .p-menu-list {
   display: flex;
@@ -94,11 +96,11 @@ $mr: 20px;
 }
 
 .p-menu-item {
-  width: calc((100% - $mr) / 2);
+  width: calc((100% - $mr-sp) / 2);
   margin-bottom: $mb;
 
   &:not(:nth-child(2n)) {
-    margin-right: $mr;
+    margin-right: $mr-sp;
   }
 
   @include mq (o-sp) {
@@ -120,6 +122,13 @@ $mr: 20px;
   margin-bottom: 16px;
 }
 
+.p-menu-item-img-ready {
+  margin: 18px 0;
+  @include mq (o-sp) {
+    margin: 24px 0;
+  }
+}
+
 .p-menu-name {
   display: flex;
   flex-direction: column;
@@ -135,15 +144,15 @@ $mr: 20px;
   .main {
     font-size: $fs;
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: 20px;
     font-family: $ff-hand;
   }
 
-  .en {
-    color: $red;
-    font-size: calc($fs * 0.6);
-    margin-bottom: 16px;
-  }
+  // .en {
+  //   color: $red;
+  //   font-size: calc($fs * 0.6);
+  //   margin-bottom: 16px;
+  // }
 }
 
 .p-menu-item-intro {
@@ -151,7 +160,7 @@ $mr: 20px;
   flex-direction: column;
   .jp {
     line-height: 1.5;
-    margin-bottom: 8px;
+    margin-bottom: 24px;
     font-size: rem(14);
 
     @include mq (o-sp) {

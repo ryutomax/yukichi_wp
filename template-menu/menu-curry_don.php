@@ -4,7 +4,7 @@
 		<span class="c-title-en">Rice</span>
 	</h4>
 	<p class="p-menu-text-jp fadein-set01">お米は千葉県産のコシヒカリ。手作りのカレーライスやおにぎり各種をご賞味ください。</p>
-	<p class="p-menu-text-en fadein-set01">Rice is Koshihikari produced in Chiba Prefecture.<br>Please enjoy our handmade curry rice and a variety of onigiri rice balls.</p>
+	<!-- <p class="p-menu-text-en fadein-set01">Rice is Koshihikari produced in Chiba Prefecture.<br>Please enjoy our handmade curry rice and a variety of onigiri rice balls.</p> -->
 	<ul class="p-menu-list">
 	<?php
 		$args = array(
@@ -27,17 +27,17 @@
 				<?php if( get_field('メニュー画像') ): ?>
 					<img class="p-menu-item-img" src="<?php the_field('メニュー画像'); ?>" alt="<?php the_field('メニュー名'); ?>" loading=”lazy”>
 				<?php else: ?>
-					<img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/menu/menu_ready.png" alt="<?php the_field('メニュー名'); ?>" class="p-menu-item-img" loading=”lazy”>
+					<img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/menu/menu_ready.png" alt="<?php the_field('メニュー名'); ?>" class="p-menu-item-img-ready" loading=”lazy”>
 					<?php endif; ?>				
 				<h4 class="p-menu-name">
 					<span class="sub"><?php the_field('メニューリード文'); ?></span>
 					<span class="main"><?php the_field('メニュー名'); ?></span>
-					<span class="en"><?php the_field('メニュー名（英語）'); ?></span>
+					<!-- <span class="en"><?php the_field('メニュー名（英語）'); ?></span> -->
 				</h4>
 				<?php get_template_part('template-parts/acf_hot_cool'); ?>
 				<div class="p-menu-item-intro">
 					<p class="jp"><?php the_field('メニュー詳細'); ?></p>
-					<p class="en"><?php the_field('メニュー詳細（英語）'); ?></p>
+					<!-- <p class="en"><?php the_field('メニュー詳細（英語）'); ?></p> -->
 					<span class="price"><?php the_field('値段'); ?></span>
 				</div>
 			</li>

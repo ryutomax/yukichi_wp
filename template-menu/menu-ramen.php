@@ -4,7 +4,7 @@
 		<span class="c-title-en">Ramen</span>
 	</h4>
 	<p class="p-menu-text-jp fadein-set01">コシのある太麺にキレのある特製醤油を使ったスープ、しっとりチャーシューと<br>手切りメンマにざっくり切った青ネギのトッピングの特製ラーメンをご賞味ください。</p>
-	<p class="p-menu-text-en fadein-set01">Please enjoy our special ramen noodles with thick, firm noodles, a sharp broth made with special soy sauce, <br>moist chashu pork and hand-cut bamboo shoots, topped with roughly chopped green onions.</p>
+	<!-- <p class="p-menu-text-en fadein-set01">Please enjoy our special ramen noodles with thick, firm noodles, a sharp broth made with special soy sauce, <br>moist chashu pork and hand-cut bamboo shoots, topped with roughly chopped green onions.</p> -->
 	<ul class="p-menu-list">
 	<?php
 		$args = array(
@@ -27,16 +27,16 @@
 			<?php if( get_field('メニュー画像') ): ?>
 				<img class="p-menu-item-img" src="<?php the_field('メニュー画像'); ?>" alt="<?php the_field('メニュー名'); ?>" loading=”lazy”>
 			<?php else: ?>
-				<img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/menu/menu_ready.png" alt="<?php the_field('メニュー名'); ?>" class="p-menu-item-img" loading=”lazy”>
+				<img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/menu/menu_ready.png" alt="<?php the_field('メニュー名'); ?>" class="p-menu-item-img-ready" loading=”lazy”>
 			<?php endif; ?>
 			<h4 class="p-menu-name">
 				<span class="sub"><?php the_field('メニューリード文'); ?></span>
 				<span class="main"><?php the_field('メニュー名'); ?></span>
-				<span class="en"><?php the_field('メニュー名（英語）'); ?></span>
+				<!-- <span class="en"><?php the_field('メニュー名（英語）'); ?></span> -->
 			</h4>
 			<div class="p-menu-item-intro">
 				<p class="jp"><?php the_field('メニュー詳細'); ?></p>
-				<p class="en"><?php the_field('メニュー詳細（英語）'); ?></p>
+				<!-- <p class="en"><?php the_field('メニュー詳細（英語）'); ?></p> -->
 				<span class="price"><?php the_field('値段'); ?></span>
 			</div>
 		</li>

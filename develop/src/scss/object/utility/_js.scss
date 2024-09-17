@@ -3,7 +3,6 @@
 //ヘッダーナビ　メニュー
 
 .is-menu-show {
-  display: block;
   animation-name: menu-background;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -11,13 +10,10 @@
 
 @keyframes menu-background {
   0% {
-    background-color: hsl(0deg 0% 100% / 0%);
-    backdrop-filter: blur(0px);
+    transform: translate(calc(0px + 16px), -36px);
   }
-
   100% {
-    background-color: hsl(0deg 0% 100% / 95%);
-    backdrop-filter: blur(6px);
+    transform: translate(calc(-100% + 16px), -36px);
   }
 }
 
@@ -53,6 +49,7 @@
 
 .is-bar-move > .js-menu-btn-bar {
   transform-origin: 50% 50%;
+  background-color: $white;
 
   &:first-child {
     transform: rotate(45deg);
@@ -70,9 +67,9 @@
     left: 0;
   }
 
-  @include mq (o-tb) {
-    left: 35%;
-  }
+  // @include mq (o-tb) {
+  //   left: 35%;
+  // }
 }
 
 // スクロールトップ

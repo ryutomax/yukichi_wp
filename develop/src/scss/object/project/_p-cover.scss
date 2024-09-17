@@ -1,84 +1,84 @@
-@use "global" as *;
+// @use "global" as *;
 
-.p-cover {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  padding: 32px 16px;
-  background-image: url("../images/main_top_bg_red.jpg");
-  background-size: cover;
-}
+// .p-cover {
+//   width: 100%;
+//   height: 100vh;
+//   position: relative;
+//   padding: 32px 16px;
+//   background-image: url("../images/main_top_bg_red.jpg");
+//   background-size: cover;
+// }
 
-.p-cover-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+// .p-cover-logo {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
 
-.p-cover-logo-link {
-  display: block;
-  min-width: 200px;
-  max-width: 340px;
-}
+// .p-cover-logo-link {
+//   display: block;
+//   min-width: 200px;
+//   max-width: 340px;
+// }
 
-.p-cover-menuBtn {
-  display: none;
-  margin-left: auto;
+// .p-cover-menuBtn {
+//   display: none;
+//   margin-left: auto;
 
-  @include mq (o-sp) {
-    display: block;
-  }
-}
+//   @include mq (o-sp) {
+//     display: block;
+//   }
+// }
 
-.p-fixBox {
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  width: 100%;
-}
+// .p-fixBox {
+//   position: fixed;
+//   z-index: -1;
+//   top: 0;
+//   width: 100%;
+// }
 
-.is-scrolled {
-  position: relative;
-  margin-top: 50px;
-}
+// .is-scrolled {
+//   position: relative;
+//   margin-top: 50px;
+// }
 
-.is-marginTop_100vh {
-  margin-top: 100vh;
-}
+// .is-marginTop_100vh {
+//   margin-top: 100vh;
+// }
 
-$line-height: 60px;
-$line-height-abs: -60px;
+// $line-height: 60px;
+// $line-height-abs: -60px;
 
-.c-scrolldown {
-  width: 1.5px;
-  height: $line-height;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  overflow: hidden;
+// .c-scrolldown {
+//   width: 1.5px;
+//   height: $line-height;
+//   position: absolute;
+//   bottom: 20px;
+//   left: 0;
+//   right: 0;
+//   margin: 0 auto;
+//   overflow: hidden;
   
-  .c-line {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: linear-gradient(to bottom, rgb(252, 252, 252) 50%, rgba(255, 255, 255, 0) 50%);
-    background-position: 0 $line-height-abs;
-    background-size: 100% 200%;
-    animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
-  }
-}
+//   .c-line {
+//     width: 100%;
+//     height: 100%;
+//     display: block;
+//     background: linear-gradient(to bottom, rgb(252, 252, 252) 50%, rgba(255, 255, 255, 0) 50%);
+//     background-position: 0 $line-height-abs;
+//     background-size: 100% 200%;
+//     animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+//   }
+// }
 
-@keyframes scrolldown {
-  0%{
-    background-position: 0 $line-height-abs;
-  }
-  75% {
-    background-position: 0 0;
-  }
-  100%{
-    background-position: 0 $line-height;
-  }
-}
+// @keyframes scrolldown {
+//   0%{
+//     background-position: 0 $line-height-abs;
+//   }
+//   75% {
+//     background-position: 0 0;
+//   }
+//   100%{
+//     background-position: 0 $line-height;
+//   }
+// }

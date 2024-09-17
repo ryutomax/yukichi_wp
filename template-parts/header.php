@@ -12,9 +12,14 @@
         <span class="c-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
       </button>
     </div>
-    <!-- /.p-header-top -->
-    <div class="p-header-btm js-menu-show">
-      <nav class="p-header-nav">
+    <div class="p-header-btm">
+      <nav class="p-header-nav js-menu-show u-sp-none">
+        <div class="p-header-nav-item"><a href="<?= esc_url(home_url('/')) ?>#introduction" class="p-header-nav-link">ごあいさつ</a></div>
+        <div class="p-header-nav-item"><a href="<?= esc_url(home_url('/')) ?>#news" class="p-header-nav-link">おしらせ</a></div>
+        <div class="p-header-nav-item"><a href="<?= esc_url(home_url('/')) ?>#menu" class="p-header-nav-link">おしながき</a></div>
+        <div class="p-header-nav-item"><a href="<?= esc_url(home_url('/')) ?>#access" class="p-header-nav-link">アクセス</a></div>
+      </nav>
+      <nav class="p-header-nav u-sp-show-flex">
         <div class="p-header-nav-item fadein-set04"><a href="<?= esc_url(home_url('/')) ?>#introduction" class="p-header-nav-link">ごあいさつ</a></div>
         <div class="p-header-nav-item fadein-set05"><a href="<?= esc_url(home_url('/')) ?>#news" class="p-header-nav-link">おしらせ</a></div>
         <div class="p-header-nav-item fadein-set06"><a href="<?= esc_url(home_url('/')) ?>#menu" class="p-header-nav-link">おしながき</a></div>
