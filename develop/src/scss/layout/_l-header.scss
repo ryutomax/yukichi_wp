@@ -63,7 +63,8 @@
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  padding-top: 120px;
+  padding: 0 8px;
+  padding-top: 72px;
   width: 50vw;
   height: 105vh;
   background-color: $gold;
@@ -88,8 +89,7 @@
 
 .p-header-nav-item {
   border-bottom: 2px solid $white;
-  padding: 32px 0;
-  // margin-bottom: 48px;
+  padding: 24px 0;
   width: 100%;
   text-align: center;
   @include mq (o-sp) {
