@@ -1,7 +1,8 @@
 @use "global" as *;
 
 .p-top {
-  background-image: url("../images/main_top_bg_red.jpg");
+  background-image: url("../images/main_top_bg_red_1.35.webp");
+  // background-image: url("../images/main_top_bg_red.jpg");
   background-size: cover;
   padding-top: 64px;
   @include mq (o-sp) {
@@ -34,7 +35,7 @@ img.p-top-main-img {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
-  padding: 20px 0;
+  padding: 64px 0 40px 0;
   justify-content: space-around;
 
   @include mq (o-sp) {
@@ -43,16 +44,20 @@ img.p-top-main-img {
 }
 
 .p-top-main-copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 2px 11px #00000087;
   color: $white;
-  font-size: rem(56);
+  font-size: rem(72);
   writing-mode: vertical-rl;
   font-family: $ff-hand;
   display: flex;
   align-items: flex-start;
-  margin-bottom: 32px;
   justify-content: center;
   flex-direction: column;
-  padding-top: 80px;
+  height: 230px;
   em {
     // background-image: linear-gradient(to left, transparent 50%, #ffffff 50%);
     background-position: 10px 0;
@@ -63,12 +68,13 @@ img.p-top-main-img {
   }
 
   @include mq (o-sp-m) {
-    font-size: rem(64);
+    font-size: rem(80);
+    height: 280px;
   }
 
   @include mq (o-sp) {
-    font-size: rem(72);
-    margin-bottom: 0;
+    // font-size: rem(96);
+    // height: 390px;
   }
 }
 
@@ -83,12 +89,12 @@ img.p-top-main-img {
   text-align: center;
 
   @include mq (o-sp-m) {
-    width: 472px;
-    font-size: rem(18);
+    font-size: min(3.3vw, rem(16));
   }
 
   @include mq (o-sp) {
     margin: 0;
+    font-size: min(3.3vw, rem(18));
     // margin-right: 40px;
   }
 }

@@ -23,6 +23,7 @@
   <section class="p-top c-section p-fixBox" id="fixBox">
     <div class="steamWrap fadein-set01">
       <div class="steamBox">
+      <h2 class="p-top-main-copy fadein-zoomout-set"><em>心躍る</em><em>うまい</em><em>一杯を</em></h2>
         <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/greeting/greeting_mv.jpg" alt="心躍る、うまい一杯を" class="p-top-main-img">
         <div class="steam01 c-steam"><img class="steam01-img" src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/steam01.png" alt="湯気"></div>
         <div class="steam02 c-steam"><img class="steam02-img" src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/steam02.png" alt="湯気"></div>
@@ -37,7 +38,7 @@
     <div class="p-top-inner c-section-inner" id="introduction">
       <div class="p-top-main">
         <div class="p-top-main-cont">
-          <h2 class="p-top-main-copy fadein-zoomout-set"><em>心躍る、</em><em>うまい</em><em>一杯を</em></h2>
+          <!-- <h2 class="p-top-main-copy fadein-zoomout-set"><em>心躍る、</em><em>うまい</em><em>一杯を</em></h2> -->
           <div class="p-top-main-text">
             <p class="p-top-main-text-jp fadein-set02">
               <em>東京蒲田の老舗蕎麦店で長年修行を重ねた後、<br>
@@ -50,9 +51,6 @@
               極太蕎麦やうどん、揚げたての天ぷらや<br>
               蕎麦店時代から人気の手作り唐揚げなど、<br>
               毎日店主自ら仕込んでいます。<br>
-              美味しくてお腹も満足していただけるボリューム感と<br>
-              アットホームな雰囲気、店主の心意気は<br>
-              蕎麦店時代から変わらず引き継がれたもの。<br>
               カウンター８席の小さなお店ではありますが、<br>
               皆様のお越しをお待ちしております。</em>
             </p>
