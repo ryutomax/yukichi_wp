@@ -59,10 +59,8 @@ export default class Animation {
     // ヘッダー　グローバルメニュー
     // ========================================
     const menuBtn = document.querySelector(".js-menu-btn");
-    // const menuBtnC = document.querySelector(".js-menu-btn-c");
 
     menuBtnAnimation(menuBtn);
-    // menuBtnAnimation(menuBtnC);
 
     function menuBtnAnimation(menuBtn) {
       menuBtn.addEventListener("click", () => {
@@ -87,19 +85,12 @@ export default class Animation {
       link.addEventListener("click", () => {
         menuBtn.classList.remove("is-bar-move");
 
-        // menuBtnC.classList.remove("is-bar-move");
 
         const menu = document.querySelector(".js-menu-show");
         menu.classList.remove("is-menu-show");
 
         const bg = document.querySelector(".js-load");
         bg.classList.remove("is-stay");
-
-        const elements = document.querySelectorAll(".p-header-nav-item.fadein-set04, .p-header-nav-item.fadein-set05, .p-header-nav-item.fadein-set06, .p-header-nav-item.fadein-set07");
-        elements.forEach(element => {
-          // fixBox.classList.add('is-scrolled');
-          element.classList.toggle("fadein-anime");
-        });
       });
     });
 
