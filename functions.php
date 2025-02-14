@@ -16,7 +16,7 @@ function enqueue_scripts() {
 	if (is_page('contact')) {wp_enqueue_script('contact', get_theme_file_uri('/assets/js/parts/contact-min.js'), [], $version, true);
 	}
 	wp_enqueue_script('jQuery', get_template_directory_uri() . '/assets/vender/jquery-3.7.1.min.js', [], $version, true);
-	wp_enqueue_script('bundle', get_template_directory_uri() . '/assets/js/bundle.js', [], $version, true);
+	wp_enqueue_script('animation', get_template_directory_uri() . '/assets/js/parts/animation-min.js', [], $version, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
