@@ -6,7 +6,16 @@
   background-size: cover;
   padding-top: 64px;
   @include mq (o-sp) {
+    min-height: 180px;
     padding-top: 0;
+  }
+  @include mq (o-tb) {
+    min-height: 200px;
+    padding-top: 0;
+  }
+
+  @include mq (o-pc) {
+    min-height: 240px;
   }
 }
 

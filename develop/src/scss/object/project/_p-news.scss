@@ -31,14 +31,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+  align-items: flex-start;
+  width: fit-content;
   max-width: 750px;
   margin: 0 auto;
-
-  @include mq (o-sp) {
-    width: 80%;
-  };
 }
 
 .p-news-link {
@@ -72,10 +68,12 @@
 }
 
 .p-news-more {
+  display: block;
   border-radius: 20px;
   border: 2px solid gray;
   padding: 10px;
   width: 160px;
+  margin: 0 auto;
   margin-top: 40px;
   background-color: #ff7f5000;
 }

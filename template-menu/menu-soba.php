@@ -25,11 +25,11 @@
 		<li class="p-menu-item fadein-set01">
 			<?php if( get_field('メニュー画像') ): ?>
 				<div class="p-menu-item-img">
-					<img src="<?php the_field('メニュー画像'); ?>" alt="<?php the_field('メニュー名'); ?>" loading=”lazy”>
+					<img src="<?php the_field('メニュー画像'); ?>" alt="<?php the_field('メニュー名'); ?>" loading="lazy">
 				</div>			
 			<?php else: ?>
 				<div class="p-menu-item-img">
-					<img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/menu/menu_ready.png" alt="<?php the_field('メニュー名'); ?>" loading=”lazy”>
+					<img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/menu/menu_ready.png" alt="<?php the_field('メニュー名'); ?>" loading="lazy">
 				</div>
 			<?php endif; ?>				
 			<h4 class="p-menu-name">

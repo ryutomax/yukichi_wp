@@ -15,8 +15,8 @@
         <div class="p-top-header-nav-item fadein-set06"><a href="<?= esc_url(home_url('/')) ?>#menu" class="p-top-header-nav-link">おしながき</a></div>
         <div class="p-top-header-nav-item fadein-set07"><a href="<?= esc_url(home_url('/')) ?>#access" class="p-top-header-nav-link">アクセス</a></div>
       </nav>
-      <!-- /.p-top-header-nav -->
-    </div> -->
+      /.p-top-header-nav -->
+    </div>
     <!-- /.p-top-header-btm -->
   </div>
   <!-- /.p-top-header-inner -->

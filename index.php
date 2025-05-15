@@ -5,21 +5,6 @@
 ?>
 
 <main class="l-main">
-  <!-- <section class="p-cover">
-    <h1 class="p-cover-logo c-logo fadein-zoomout-set">
-      <a class="p-cover-logo-link" href="<?= esc_url(home_url('/')) ?>">
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/main_logo_white.png" alt="諭吉そば 心躍る、うまい一杯を" class="p-top-header-logo-img">
-      </a>
-    </h1>
-    <button class="p-cover-menuBtn c-menuBtn js-menu-btn-c u-zindex_1000" aria-label="Menuを開く">
-      <span class="c-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
-      <span class="c-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
-      <span class="c-menuBtn-bar js-menu-btn-bar u-zindex_1"></span>
-    </button>
-    <div class="c-scrolldown">
-      <div class="c-line"></div>
-    </div>
-  </section> -->
   <section class="p-top c-section p-fixBox" id="fixBox">
     <div class="steamWrap fadein-set01">
       <div class="steamBox">
@@ -66,7 +51,7 @@
       <span class="c-title-jp">おしらせ</span>
       <span class="c-title-en">NEWS</span>
     </h3>
-    <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/news/news_mv.jpg" alt="おしらせ" class="p-news-img" loading=”lazy”>
+    <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/news/news_mv.jpg" alt="おしらせ" class="p-news-img" loading="lazy">
     <div class="p-news-inner c-section-inner">
       <div class="p-news-list">
         <?php
@@ -98,7 +83,7 @@
               <article class="p-news-itme fadein-set01">
                 <a href="<?php the_permalink(); ?>" class="p-news-link">
                   <time datetime="<?= get_the_date('Y.m.d'); ?>" class="p-news-time"><?= get_the_date('Y.m.d'); ?></time>
-                  <h4 class="p-news-time-ttl"><?php str_len($post->post_title, 30); ?></h4>
+                  <h4 class="p-news-item-ttl"><?php str_len($post->post_title, 30); ?></h4>
                 </a>
               </article>
             <!-- 最後の記事でタグを閉じる 記事カウント件数＝表示記事数-->
@@ -115,6 +100,7 @@
             endif;
             wp_reset_postdata();
         ?>
+        </div>
       </div>
       <?php if($news_num > 5): ?>
         <button id="more" class="p-news-more">MORE</button>
@@ -130,7 +116,7 @@
       <span class="c-title-jp fadein-zoomout-set">おしながき</span>
       <span class="c-title-en fadein-zoomout-set">MENU</span>
     </h3>
-    <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/menu/menu_mv.jpg" alt="心躍る、うまい一杯を" class="p-menu-img" loading=”lazy”>
+    <img src="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/menu/menu_mv.jpg" alt="心躍る、うまい一杯を" class="p-menu-img" loading="lazy">
     <div class="p-menu-inner c-section-inner">
       <!-- ラーメン -->
       <?php get_template_part('template-menu/menu-ramen'); ?>

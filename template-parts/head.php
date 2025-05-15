@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
 
+  <?php $description = 'コシのある太麺にキレのある特製醤油を使ったスープ、しっとりチャーシューと
+手切りメンマにざっくり切った青ネギのトッピングの特製ラーメンをご賞味ください。'; ?>
   <?php if (is_home() || is_front_page()) :?>
     <?php $title = "諭吉そば"; ?>
-    <?php $description = '諭吉そば 心躍る、うまい一杯を'; ?>
   <?php elseif (is_page('contact') || is_page('complete')) :?>
     <?php $title = "お問い合わせ｜諭吉そば"; ?>
-    <?php $description = '諭吉そば 心躍る、うまい一杯を'; ?>
   <?php elseif (is_single() && ('news' == get_post_type())) :?>
     <?php $title = "おしらせ｜諭吉そば"; ?>
-    <?php $description = '諭吉そば 心躍る、うまい一杯を'; ?>
   <?php else:?>
     <?php $title = "諭吉そば"; ?>
-    <?php $description = '諭吉そば 心躍る、うまい一杯を'; ?>
   <?php endif; ?>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="<?= $description ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title><?= $title ?></title>
+    <meta name="description" content="<?= $description ?>" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +38,6 @@
     <meta name="twitter:description" content="<?= $description ?>" />
     <meta name="twitter:image" content="<?php echo esc_url(get_template_directory_uri() . '/'); ?>assets/images/common/OGP.jpg" />
     <!--絶対パスで記述-->
-    <title><?= $title ?></title>
     <?php wp_head(); ?>
   </head>
 

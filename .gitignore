@@ -6,10 +6,6 @@ composer.phar
 ##############
 node_modules
 index.html
-# *.js
-app-min.css
-bundle.js
-assets/images/*
 
 .git
 

@@ -4,13 +4,6 @@
   get_template_part('template-parts/header');
 ?>
 <main class="l-main">
-  <?php
-    $args = [
-      'breadcrumb_slug_arr' => [],
-      'breadcrumb_arr' => ['404【お探しのページはありません】']
-    ];
-    get_template_part('template-parts/breadcrumb', null, $args);
-  ?>
   <section class="p-404">
     <h3 class="p-404-title">Sorry...</h3>
     <p class="p-404-text">Page not found.<br>お探しのページはありません</p>
