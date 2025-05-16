@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /yukichi-test/wp-content/themes/yukichi/  # デプロイ先ディレクトリを適宜変更
+          server-dir: ${{ secrets.FTP_DIR }}
           exclude: |
             **/.git/**
             **/.github/**
