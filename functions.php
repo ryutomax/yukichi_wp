@@ -13,8 +13,6 @@ add_action('wp_enqueue_scripts', 'enqueue_styles');
 function enqueue_scripts() {
 	$version = date('Ymd-Hi'); // バージョン番号を設定
 
-	if (is_page('contact')) {wp_enqueue_script('contact', get_theme_file_uri('/assets/js/parts/contact-min.js'), [], $version, true);
-	}
 	wp_enqueue_script('jQuery', get_template_directory_uri() . '/assets/vender/jquery-3.7.1.min.js', [], $version, true);
 	wp_enqueue_script('animation', get_template_directory_uri() . '/assets/js/parts/animation-min.js', [], $version, true);
 }

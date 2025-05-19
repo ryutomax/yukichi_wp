@@ -26,19 +26,3 @@ Template Name: お問い合わせフォーム
   </div>
 </main>
 <?php get_template_part('template-parts/footer') ?>
-
-<script>
-  <?php if(is_page('contact')): ?>//取材申し込み入力ページのみ処理実施
-    const targetBtm = document.getElementById('input-bottom');
-    if(targetBtm) {
-      targetBtm.classList.add('is-display-block');
-    }
-
-    const btmLink = document.getElementById('bottom-link');
-    if(btmLink) {
-      btmLink.href = "<?= esc_url(home_url('/')) ?>information";
-    }
-
-    document.getElementById("datetime-local").type = "datetime-local";
-  <?php endif; ?>
-</script>

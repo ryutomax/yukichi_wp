@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-contact {
-  background-image: url("../images/main_top_bg_red.jpg");
+  background-image: url("../images/main_top_bg_red.webp");
   background-size: cover;
   position: relative;
 
@@ -151,7 +151,6 @@ input[type=checkbox]:checked::after {
 
 .p-input-submit,
 .wpcf7-submit {
-  background-image: url(../images/contact/icon_white_arrow.png);
   background-repeat: no-repeat;
   background-size: 12px;
   background-position: 70%;
@@ -213,4 +212,10 @@ input[type=checkbox]:checked::after {
 
 .mwform-checkbox-field-text {
   line-height: 1.7;
+}
+
+.p-input-topBack {
+    display: block;
+    text-align: center;
+    text-decoration: underline;
 }
